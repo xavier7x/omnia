@@ -1,2 +1,0 @@
-2018-06-12 20:34:13 >>> Error en el query: SELECT DISTINCT COUNT(c.idproducto) as y,p.nombre as name FROM cli_visualizacion_producto c LEFT JOIN productos p ON p.idproducto = c.idproducto GROUP by c.idproducto order BY vistas limit 5
-2018-06-12 21:30:52 >>> Error en el query: SELECT DISTINCT COUNT(c.idproducto) as y,p.nombre as name, p.id_producto as id FROM cli_visualizacion_producto c LEFT JOIN productos p ON p.idproducto = c.idproducto GROUP by c.idproducto order BY y limit 5
