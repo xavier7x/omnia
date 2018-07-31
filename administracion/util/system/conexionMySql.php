@@ -10,10 +10,10 @@ class DBManager{
     
     public function __construct(){
         
-		$this->Servidor = "";
-		$this->BaseDatos = "";
-        $this->Usuario = "";
-		$this->Clave = "";		
+		$this->Servidor = "localhost";
+		$this->BaseDatos = "marketton_produccion";
+        $this->Usuario = "marketton_produc";
+		$this->Clave = "9PvBS4Nmvx#l";		
         
 	}
     
