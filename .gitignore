@@ -5,3 +5,9 @@
 .vscode/
 
 node_modules/
+
+# OJO
+util/system/conexionMySql.php
+administracion/util/system/conexionMySql.php
+administracion/docfac/
+administracion/docped/
