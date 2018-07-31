@@ -8,7 +8,8 @@ node_modules/
 
 # Carpetas y archivos que NO se toman en cuenta
 images/productos/
-util/system/conexionMySql.php
-administracion/util/system/conexionMySql.php
 administracion/docfac/
 administracion/docped/
+
+util/system/conexionMySql.php
+administracion/util/system/conexionMySql.php
