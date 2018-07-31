@@ -1,0 +1,582 @@
+2017-09-26 21:22:29 >>> Error en el query: 
+            INSERT INTO cli_log_menu_con_sesion
+            (ip, 
+            navegador, 
+            usuario, tipocliente, 
+            pagina, 
+            idcategoria, 
+            idsubcategoria, 
+            num_pagina, 
+            idproducto, 
+            buscar, 
+            sys_date) 
+            VALUES 
+            ('198.1.108.157',
+            'Firefox - 32.0',
+            'vg2m2lf57r4r9dvv0s3doi6cb5','visitante',
+            'subcategorias',
+            NULL,
+            '1',
+            '1' order by 1 -- ;',
+            NULL,
+            NULL,
+            NOW())
+        
+2017-09-26 21:22:30 >>> Error en el query: 
+            INSERT INTO cli_log_menu_con_sesion
+            (ip, 
+            navegador, 
+            usuario, tipocliente, 
+            pagina, 
+            idcategoria, 
+            idsubcategoria, 
+            num_pagina, 
+            idproducto, 
+            buscar, 
+            sys_date) 
+            VALUES 
+            ('198.1.108.157',
+            'Firefox - 32.0',
+            'vg2m2lf57r4r9dvv0s3doi6cb5','visitante',
+            'subcategorias',
+            NULL,
+            '1',
+            '1' order by 999 -- ;',
+            NULL,
+            NULL,
+            NOW())
+        
+2017-09-26 21:22:44 >>> Error en el query: 
+            INSERT INTO cli_log_menu_con_sesion
+            (ip, 
+            navegador, 
+            usuario, tipocliente, 
+            pagina, 
+            idcategoria, 
+            idsubcategoria, 
+            num_pagina, 
+            idproducto, 
+            buscar, 
+            sys_date) 
+            VALUES 
+            ('198.1.108.157',
+            'Firefox - 32.0',
+            'ngj32iq0pni17bac85j09fcbj3','visitante',
+            'subcategorias',
+            NULL,
+            '7',
+            '1' order by 1 -- ;',
+            NULL,
+            NULL,
+            NOW())
+        
+2017-09-26 21:22:45 >>> Error en el query: 
+            INSERT INTO cli_log_menu_con_sesion
+            (ip, 
+            navegador, 
+            usuario, tipocliente, 
+            pagina, 
+            idcategoria, 
+            idsubcategoria, 
+            num_pagina, 
+            idproducto, 
+            buscar, 
+            sys_date) 
+            VALUES 
+            ('198.1.108.157',
+            'Firefox - 32.0',
+            'ngj32iq0pni17bac85j09fcbj3','visitante',
+            'subcategorias',
+            NULL,
+            '7',
+            '1' order by 999 -- ;',
+            NULL,
+            NULL,
+            NOW())
+        
+2017-09-26 21:22:59 >>> Error en el query: 
+            INSERT INTO cli_log_menu_con_sesion
+            (ip, 
+            navegador, 
+            usuario, tipocliente, 
+            pagina, 
+            idcategoria, 
+            idsubcategoria, 
+            num_pagina, 
+            idproducto, 
+            buscar, 
+            sys_date) 
+            VALUES 
+            ('198.1.108.157',
+            'Firefox - 32.0',
+            'h5no9i9udk3ddkn6eg023v1sk5','visitante',
+            'subcategorias',
+            NULL,
+            '8',
+            '1' order by 1 -- ;',
+            NULL,
+            NULL,
+            NOW())
+        
+2017-09-26 21:23:00 >>> Error en el query: 
+            INSERT INTO cli_log_menu_con_sesion
+            (ip, 
+            navegador, 
+            usuario, tipocliente, 
+            pagina, 
+            idcategoria, 
+            idsubcategoria, 
+            num_pagina, 
+            idproducto, 
+            buscar, 
+            sys_date) 
+            VALUES 
+            ('198.1.108.157',
+            'Firefox - 32.0',
+            'h5no9i9udk3ddkn6eg023v1sk5','visitante',
+            'subcategorias',
+            NULL,
+            '8',
+            '1' order by 999 -- ;',
+            NULL,
+            NULL,
+            NOW())
+        
+2017-09-26 21:23:13 >>> Error en el query: 
+            INSERT INTO cli_log_menu_con_sesion
+            (ip, 
+            navegador, 
+            usuario, tipocliente, 
+            pagina, 
+            idcategoria, 
+            idsubcategoria, 
+            num_pagina, 
+            idproducto, 
+            buscar, 
+            sys_date) 
+            VALUES 
+            ('198.1.108.157',
+            'Firefox - 32.0',
+            'jlbklnu9jgjlp4touhibugakf2','visitante',
+            'subcategorias',
+            NULL,
+            '6',
+            '1' order by 1 -- ;',
+            NULL,
+            NULL,
+            NOW())
+        
+2017-09-26 21:23:14 >>> Error en el query: 
+            INSERT INTO cli_log_menu_con_sesion
+            (ip, 
+            navegador, 
+            usuario, tipocliente, 
+            pagina, 
+            idcategoria, 
+            idsubcategoria, 
+            num_pagina, 
+            idproducto, 
+            buscar, 
+            sys_date) 
+            VALUES 
+            ('198.1.108.157',
+            'Firefox - 32.0',
+            'jlbklnu9jgjlp4touhibugakf2','visitante',
+            'subcategorias',
+            NULL,
+            '6',
+            '1' order by 999 -- ;',
+            NULL,
+            NULL,
+            NOW())
+        
+2017-09-26 21:23:27 >>> Error en el query: 
+            INSERT INTO cli_log_menu_con_sesion
+            (ip, 
+            navegador, 
+            usuario, tipocliente, 
+            pagina, 
+            idcategoria, 
+            idsubcategoria, 
+            num_pagina, 
+            idproducto, 
+            buscar, 
+            sys_date) 
+            VALUES 
+            ('198.1.108.157',
+            'Firefox - 32.0',
+            'h0bkdbp1hcutnrqq0if7lv3tp1','visitante',
+            'subcategorias',
+            NULL,
+            '11',
+            '1' order by 1 -- ;',
+            NULL,
+            NULL,
+            NOW())
+        
+2017-09-26 21:23:28 >>> Error en el query: 
+            INSERT INTO cli_log_menu_con_sesion
+            (ip, 
+            navegador, 
+            usuario, tipocliente, 
+            pagina, 
+            idcategoria, 
+            idsubcategoria, 
+            num_pagina, 
+            idproducto, 
+            buscar, 
+            sys_date) 
+            VALUES 
+            ('198.1.108.157',
+            'Firefox - 32.0',
+            'h0bkdbp1hcutnrqq0if7lv3tp1','visitante',
+            'subcategorias',
+            NULL,
+            '11',
+            '1' order by 999 -- ;',
+            NULL,
+            NULL,
+            NOW())
+        
+2017-09-26 21:23:42 >>> Error en el query: 
+            INSERT INTO cli_log_menu_con_sesion
+            (ip, 
+            navegador, 
+            usuario, tipocliente, 
+            pagina, 
+            idcategoria, 
+            idsubcategoria, 
+            num_pagina, 
+            idproducto, 
+            buscar, 
+            sys_date) 
+            VALUES 
+            ('198.1.108.157',
+            'Firefox - 32.0',
+            '7tng788fvthj9j3dis3upj9os6','visitante',
+            'subcategorias',
+            NULL,
+            '9',
+            '1' order by 1 -- ;',
+            NULL,
+            NULL,
+            NOW())
+        
+2017-09-26 21:23:43 >>> Error en el query: 
+            INSERT INTO cli_log_menu_con_sesion
+            (ip, 
+            navegador, 
+            usuario, tipocliente, 
+            pagina, 
+            idcategoria, 
+            idsubcategoria, 
+            num_pagina, 
+            idproducto, 
+            buscar, 
+            sys_date) 
+            VALUES 
+            ('198.1.108.157',
+            'Firefox - 32.0',
+            '7tng788fvthj9j3dis3upj9os6','visitante',
+            'subcategorias',
+            NULL,
+            '9',
+            '1' order by 999 -- ;',
+            NULL,
+            NULL,
+            NOW())
+        
+2017-09-26 21:23:57 >>> Error en el query: 
+            INSERT INTO cli_log_menu_con_sesion
+            (ip, 
+            navegador, 
+            usuario, tipocliente, 
+            pagina, 
+            idcategoria, 
+            idsubcategoria, 
+            num_pagina, 
+            idproducto, 
+            buscar, 
+            sys_date) 
+            VALUES 
+            ('198.1.108.157',
+            'Firefox - 32.0',
+            '6l585k6hcp6p6roigv9cagbpn6','visitante',
+            'subcategorias',
+            NULL,
+            '2',
+            '1' order by 1 -- ;',
+            NULL,
+            NULL,
+            NOW())
+        
+2017-09-26 21:23:58 >>> Error en el query: 
+            INSERT INTO cli_log_menu_con_sesion
+            (ip, 
+            navegador, 
+            usuario, tipocliente, 
+            pagina, 
+            idcategoria, 
+            idsubcategoria, 
+            num_pagina, 
+            idproducto, 
+            buscar, 
+            sys_date) 
+            VALUES 
+            ('198.1.108.157',
+            'Firefox - 32.0',
+            '6l585k6hcp6p6roigv9cagbpn6','visitante',
+            'subcategorias',
+            NULL,
+            '2',
+            '1' order by 999 -- ;',
+            NULL,
+            NULL,
+            NOW())
+        
+2017-09-26 21:24:11 >>> Error en el query: 
+            INSERT INTO cli_log_menu_con_sesion
+            (ip, 
+            navegador, 
+            usuario, tipocliente, 
+            pagina, 
+            idcategoria, 
+            idsubcategoria, 
+            num_pagina, 
+            idproducto, 
+            buscar, 
+            sys_date) 
+            VALUES 
+            ('198.1.108.157',
+            'Firefox - 32.0',
+            '0trrffvfb93nji2pqb7jnraos3','visitante',
+            'subcategorias',
+            NULL,
+            '12',
+            '1' order by 1 -- ;',
+            NULL,
+            NULL,
+            NOW())
+        
+2017-09-26 21:24:12 >>> Error en el query: 
+            INSERT INTO cli_log_menu_con_sesion
+            (ip, 
+            navegador, 
+            usuario, tipocliente, 
+            pagina, 
+            idcategoria, 
+            idsubcategoria, 
+            num_pagina, 
+            idproducto, 
+            buscar, 
+            sys_date) 
+            VALUES 
+            ('198.1.108.157',
+            'Firefox - 32.0',
+            '0trrffvfb93nji2pqb7jnraos3','visitante',
+            'subcategorias',
+            NULL,
+            '12',
+            '1' order by 999 -- ;',
+            NULL,
+            NULL,
+            NOW())
+        
+2017-09-26 21:24:26 >>> Error en el query: 
+            INSERT INTO cli_log_menu_con_sesion
+            (ip, 
+            navegador, 
+            usuario, tipocliente, 
+            pagina, 
+            idcategoria, 
+            idsubcategoria, 
+            num_pagina, 
+            idproducto, 
+            buscar, 
+            sys_date) 
+            VALUES 
+            ('198.1.108.157',
+            'Firefox - 32.0',
+            '3f3hmqu1i10ii97hnjhgq9ine3','visitante',
+            'subcategorias',
+            NULL,
+            '3',
+            '1' order by 1 -- ;',
+            NULL,
+            NULL,
+            NOW())
+        
+2017-09-26 21:24:26 >>> Error en el query: 
+            INSERT INTO cli_log_menu_con_sesion
+            (ip, 
+            navegador, 
+            usuario, tipocliente, 
+            pagina, 
+            idcategoria, 
+            idsubcategoria, 
+            num_pagina, 
+            idproducto, 
+            buscar, 
+            sys_date) 
+            VALUES 
+            ('198.1.108.157',
+            'Firefox - 32.0',
+            '3f3hmqu1i10ii97hnjhgq9ine3','visitante',
+            'subcategorias',
+            NULL,
+            '3',
+            '1' order by 999 -- ;',
+            NULL,
+            NULL,
+            NOW())
+        
+2017-09-26 21:24:40 >>> Error en el query: 
+            INSERT INTO cli_log_menu_con_sesion
+            (ip, 
+            navegador, 
+            usuario, tipocliente, 
+            pagina, 
+            idcategoria, 
+            idsubcategoria, 
+            num_pagina, 
+            idproducto, 
+            buscar, 
+            sys_date) 
+            VALUES 
+            ('198.1.108.157',
+            'Firefox - 32.0',
+            'eprubc9mu8m6hphrh41eiqv1b6','visitante',
+            'subcategorias',
+            NULL,
+            '10',
+            '1' order by 1 -- ;',
+            NULL,
+            NULL,
+            NOW())
+        
+2017-09-26 21:24:41 >>> Error en el query: 
+            INSERT INTO cli_log_menu_con_sesion
+            (ip, 
+            navegador, 
+            usuario, tipocliente, 
+            pagina, 
+            idcategoria, 
+            idsubcategoria, 
+            num_pagina, 
+            idproducto, 
+            buscar, 
+            sys_date) 
+            VALUES 
+            ('198.1.108.157',
+            'Firefox - 32.0',
+            'eprubc9mu8m6hphrh41eiqv1b6','visitante',
+            'subcategorias',
+            NULL,
+            '10',
+            '1' order by 999 -- ;',
+            NULL,
+            NULL,
+            NOW())
+        
+2017-09-26 21:24:55 >>> Error en el query: 
+            INSERT INTO cli_log_menu_con_sesion
+            (ip, 
+            navegador, 
+            usuario, tipocliente, 
+            pagina, 
+            idcategoria, 
+            idsubcategoria, 
+            num_pagina, 
+            idproducto, 
+            buscar, 
+            sys_date) 
+            VALUES 
+            ('198.1.108.157',
+            'Firefox - 32.0',
+            'q3k921ds2is2cgj8h4jd3kpse6','visitante',
+            'subcategorias',
+            NULL,
+            '5',
+            '1' order by 1 -- ;',
+            NULL,
+            NULL,
+            NOW())
+        
+2017-09-26 21:24:56 >>> Error en el query: 
+            INSERT INTO cli_log_menu_con_sesion
+            (ip, 
+            navegador, 
+            usuario, tipocliente, 
+            pagina, 
+            idcategoria, 
+            idsubcategoria, 
+            num_pagina, 
+            idproducto, 
+            buscar, 
+            sys_date) 
+            VALUES 
+            ('198.1.108.157',
+            'Firefox - 32.0',
+            'q3k921ds2is2cgj8h4jd3kpse6','visitante',
+            'subcategorias',
+            NULL,
+            '5',
+            '1' order by 999 -- ;',
+            NULL,
+            NULL,
+            NOW())
+        
+2017-09-26 21:25:10 >>> Error en el query: 
+            INSERT INTO cli_log_menu_con_sesion
+            (ip, 
+            navegador, 
+            usuario, tipocliente, 
+            pagina, 
+            idcategoria, 
+            idsubcategoria, 
+            num_pagina, 
+            idproducto, 
+            buscar, 
+            sys_date) 
+            VALUES 
+            ('198.1.108.157',
+            'Firefox - 32.0',
+            'vgdrr223176hv77pqch07gap47','visitante',
+            'subcategorias',
+            NULL,
+            '4',
+            '1' order by 1 -- ;',
+            NULL,
+            NULL,
+            NOW())
+        
+2017-09-26 21:25:11 >>> Error en el query: 
+            INSERT INTO cli_log_menu_con_sesion
+            (ip, 
+            navegador, 
+            usuario, tipocliente, 
+            pagina, 
+            idcategoria, 
+            idsubcategoria, 
+            num_pagina, 
+            idproducto, 
+            buscar, 
+            sys_date) 
+            VALUES 
+            ('198.1.108.157',
+            'Firefox - 32.0',
+            'vgdrr223176hv77pqch07gap47','visitante',
+            'subcategorias',
+            NULL,
+            '4',
+            '1' order by 999 -- ;',
+            NULL,
+            NULL,
+            NOW())
+        
+2018-05-28 21:50:36 >>> Error en el query: 
+                    INSERT INTO email_boletines
+                    (correo_news, estado, fecha_alta,) 
+                    VALUES 
+                    ('xaviermorenoaviles@gmail.com','ACTIVO',NOW())
+                

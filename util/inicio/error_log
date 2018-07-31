@@ -1,0 +1,23 @@
+[28-May-2018 21:41:49 America/Guayaquil] PHP Parse error:  syntax error, unexpected end of file in /home/marketton/public_html/util/inicio/insert.php on line 86
+[28-May-2018 21:43:11 America/Guayaquil] PHP Parse error:  syntax error, unexpected end of file in /home/marketton/public_html/util/inicio/insert.php on line 86
+[28-May-2018 21:43:22 America/Guayaquil] PHP Parse error:  syntax error, unexpected end of file in /home/marketton/public_html/util/inicio/insert.php on line 86
+[28-May-2018 21:44:49 America/Guayaquil] PHP Parse error:  syntax error, unexpected end of file in /home/marketton/public_html/util/inicio/insert.php on line 86
+[28-May-2018 21:45:15 America/Guayaquil] PHP Parse error:  syntax error, unexpected end of file in /home/marketton/public_html/util/inicio/insert.php on line 86
+[28-May-2018 21:45:25 America/Guayaquil] PHP Parse error:  syntax error, unexpected end of file in /home/marketton/public_html/util/inicio/insert.php on line 86
+[28-May-2018 21:46:05 America/Guayaquil] PHP Parse error:  syntax error, unexpected end of file in /home/marketton/public_html/util/inicio/insert.php on line 86
+[28-May-2018 21:46:33 America/Guayaquil] PHP Parse error:  syntax error, unexpected end of file in /home/marketton/public_html/util/inicio/insert.php on line 86
+[28-May-2018 22:03:42 America/Guayaquil] PHP Notice:  Undefined variable: val in /home/marketton/public_html/util/inicio/insert.php on line 37
+[28-May-2018 22:03:52 America/Guayaquil] PHP Notice:  Undefined variable: val in /home/marketton/public_html/util/inicio/insert.php on line 37
+[28-May-2018 22:05:12 America/Guayaquil] PHP Notice:  Undefined offset: 1 in /home/marketton/public_html/util/inicio/insert.php on line 37
+[28-May-2018 22:05:22 America/Guayaquil] PHP Notice:  Undefined offset: 0 in /home/marketton/public_html/util/inicio/insert.php on line 37
+[28-May-2018 22:06:37 America/Guayaquil] PHP Notice:  Undefined offset: 0 in /home/marketton/public_html/util/inicio/insert.php on line 38
+[28-May-2018 22:06:49 America/Guayaquil] PHP Notice:  Undefined offset: 0 in /home/marketton/public_html/util/inicio/insert.php on line 38
+[28-May-2018 22:08:12 America/Guayaquil] PHP Notice:  Undefined offset: 0 in /home/marketton/public_html/util/inicio/insert.php on line 38
+[28-May-2018 22:08:45 America/Guayaquil] PHP Notice:  Undefined offset: 0 in /home/marketton/public_html/util/inicio/insert.php on line 38
+[28-May-2018 22:08:51 America/Guayaquil] PHP Notice:  Undefined offset: 0 in /home/marketton/public_html/util/inicio/insert.php on line 38
+[28-May-2018 22:08:56 America/Guayaquil] PHP Notice:  Undefined offset: 0 in /home/marketton/public_html/util/inicio/insert.php on line 38
+[28-May-2018 22:09:39 America/Guayaquil] PHP Notice:  Undefined offset: 0 in /home/marketton/public_html/util/inicio/insert.php on line 38
+[28-May-2018 22:12:01 America/Guayaquil] PHP Notice:  Undefined offset: 0 in /home/marketton/public_html/util/inicio/insert.php on line 38
+[28-May-2018 22:16:58 America/Guayaquil] PHP Notice:  Undefined offset: 0 in /home/marketton/public_html/util/inicio/insert.php on line 34
+[28-May-2018 22:17:26 America/Guayaquil] PHP Notice:  Undefined offset: 0 in /home/marketton/public_html/util/inicio/insert.php on line 34
+[28-May-2018 22:18:25 America/Guayaquil] PHP Notice:  Undefined offset: 0 in /home/marketton/public_html/util/inicio/insert.php on line 34

@@ -1,0 +1,11 @@
+# Robots Servidor Marketton
+# Disallow:   /util/
+# Disallow:   /administracion/util/
+
+User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+Sitemap: https://www.marketton.com/sitemap.xml

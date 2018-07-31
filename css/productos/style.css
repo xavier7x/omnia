@@ -1,0 +1,50 @@
+/*--single--*/
+.single-right h3 {
+	color: #000;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+p.in-pa{
+    color: #999;
+    font-size: 1em;
+    line-height: 2em;
+    margin: 1em 0;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 1em 0;
+}
+.pr-single{
+    padding-bottom: 1em;
+}
+
+.pr-single a {
+    float: right;
+    margin-top: 0.5em;
+}
+
+.reduced{
+	color: #FC6914;
+    font-size: 1em;
+	margin-top: 1em;
+}
+.reduced del{
+	 margin-right: 2%;
+    color: #62BF43;
+    font-size: 0.9em;
+}
+
+.single {
+    padding: 7em 0 0;
+}
+.con-sin{
+	margin:0;
+}
+
+
+.single-w3agile{
+	border: 1px solid #DEDEDE;
+    text-align: center;
+    padding: 2em;
+}
+.single-w3agile img{
+	margin:0 auto;
+}
