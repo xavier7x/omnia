@@ -10,6 +10,5 @@ node_modules/
 images/productos/
 administracion/docfac/
 administracion/docped/
-
 util/system/conexionMySql.php
 administracion/util/system/conexionMySql.php
