@@ -1,0 +1,33 @@
+/*-- terms-section-starts --*/
+.terms h6 {
+    font-size: 1.5em;
+    color: #5D5D5D;
+}
+.terms h6 span{
+         color: #ED0612;
+}
+.terms p {
+    color: #999;
+    font-size: 1em;
+    line-height: 2em;
+    margin-top: 15px;
+    padding-left: 40px;
+}
+.terms ol li {
+    color: #999;
+    font-size:0.9em;
+    font-weight: 300;
+    line-height: 26px;
+    margin-top: 15px;
+}
+.terms {
+    padding: 6em 0;
+}
+
+.terms-bottom {
+    margin-top: 3em;
+}
+.ter-wthree{
+	margin-bottom:1em;
+}
+/*-- //terms-section-ends --*/
