@@ -1,4 +1,3 @@
-<!--comnment -->
 <div data-vide-bg="<?php echo $pdet_valor['hostapp']; ?>/videos/vide/video">
     <div class="container">
 		<div class="banner-info">
