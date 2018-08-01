@@ -7,6 +7,10 @@ RewriteEngine On
 # ErrorDocument 404 http://www.marketton.com/page404.php
 ErrorDocument 404 http://localhost/marketton/page404.php
 
+# Redirigir la url sin www
+# RewriteCond %{HTTP_HOST} ^marketton.com [NC]
+# RewriteRule (.*) http://www.marketton.com/$1 [R=301,L,QSA]
+
 RewriteCond %{REQUEST_FILENAME} !-d
 # RewriteRule (.*)/$ http://www.marketton.com/$1 [R=301,L,QSA]
 RewriteRule (.*)/$ http://localhost/marketton/$1 [R=301,L,QSA]
