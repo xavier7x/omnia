@@ -122,7 +122,7 @@
         </div>
     </div>
 </div>
-<!--------------------------------->
+
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -172,12 +172,14 @@
                             $listaMenu .= $listaMenuInt;
                             $listaMenu .= '</li>';
                         }
+                        
                     }
-                
+
                 echo $listaMenu;
                 ?>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://www.marketton.com" target ="_blank">Mi sitio</b></a></li>
                 <li><a>Bienvenido <b><?php echo $_SESSION['nombre'] ?></b></a></li>
                 <li><a href="util/system/logoutSession.php"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
             </ul>
