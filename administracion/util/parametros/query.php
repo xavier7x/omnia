@@ -22,7 +22,6 @@ $respuesta->rows = array();
 
   
         $respuesta->rows[$cont] = $fila;
-        
         $button = '<button type="button" title="Editar" class="btn btn-warning gestion_update" data-idparametro="'.$fila['idparametro'].'">';
         $button .= '<span class="glyphicon glyphicon-pencil"></span>';
         $button .= '</button>';

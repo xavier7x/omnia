@@ -3,7 +3,6 @@ function mostrarDatos(){
         var mydata;
 
         $('#jqGridParametros').jqGrid('clearGridData');
-
         $.ajax({
             async: false,
             type: "POST",

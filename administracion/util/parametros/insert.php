@@ -47,7 +47,6 @@ if(
                 valor,user_create, sys_create)
                 VALUES ('".$idparametro."','".$nombre."','".$descripcion."',
                 '".$valor."','".$usuario."',NOW());
-
                 ");
 
                 if($resultado == true){

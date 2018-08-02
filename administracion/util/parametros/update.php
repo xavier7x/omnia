@@ -16,7 +16,6 @@ $descripcion = "";
 $valor = "";
 $actualizado_por = "";
 
-
 if(
     (isset($_POST['usuario']) && !empty($_POST['usuario'])) && 
     (isset($_POST['idparametro']) && !empty($_POST['idparametro'])) && 

@@ -16,7 +16,7 @@
         <br>
         <div class="col-sm-12">
             <div class="well well-sm">
-                (*) Campos obligatorios
+            (*) Campos obligatorios
             </div>
             <form role="form" id="formParametroDetalle">
                 <div class="row">  
