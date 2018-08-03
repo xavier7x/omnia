@@ -404,7 +404,7 @@ if($pdet_valor['sistemaactivo'] == 'SI'){
                 $graficoProducto .= '</div>';
                 $graficoProducto .= '</div>';
                 $graficoProducto .= '<div class="col-md-7 span-1 ">';
-                $graficoProducto .= '<h3>'.$inNombre.'</h3>';
+                $graficoProducto .= '<h3 class="quick"><a id="prodTitle" href="'.$inHostApp.'/productos/'.$inNombreSeo.'" title="'.$inNombre.'">'.$inNombre.'</a></h3>';
                 $graficoProducto .= '<p class="in-para">'.$inDescripcionCorta.'</p>';
                 $graficoProducto .= '<div class="price_single">';
                 $graficoProducto .= '<span class="reducedfrom "><del class="price_single_ant">'.( !empty($inPrecioAnterior) && $inPrecioAnterior > $inPrecio ? "$".$inPrecioAnterior : "" ).'</del>$'.$inPrecio.'</span>';
