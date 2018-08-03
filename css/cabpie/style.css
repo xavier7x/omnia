@@ -203,6 +203,12 @@ img.img-head {
 .instagram span {
 	background-color: #E3376F;
 }
+.google span {
+	background-color: #CB2028;
+}
+.linkedin span{
+    background-color: #0073b1;
+}
 .whatsapp span {
 	background-color: #34AF23;
 }
@@ -240,10 +246,18 @@ img.img-head {
 .icon .fa-whatsapp {
 	color: #34AF23;
 }
+.icon .fa-google-plus{
+    color: #CB2028;
+}
+.icon .fa-linkedin{
+    color: #0073b1;
+}
 .icon:hover .fa-facebook,
 .icon:hover .fa-twitter,
 .icon:hover .fa-pinterest-p,
 .icon:hover .fa-dribbble,
+.icon:hover .fa-google-plus,
+.icon:hover .fa-linkedin,
 .icon:hover .fa-instagram,
 .icon:hover .fa-whatsapp{
 	color: white;
