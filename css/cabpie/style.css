@@ -1185,8 +1185,8 @@ a#myTabDrop1 {
   display:none;
   text-decoration:none;
   position:fixed;
-  bottom: 50px;
-  right: 1%;
+  bottom: 83px;
+  right: 2%;
   overflow:hidden;
   z-index: 999; 
   width: 40px;
