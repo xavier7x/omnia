@@ -814,8 +814,14 @@ div#my-cart-empty-message {
 .modal-spa-producto {
     padding: 1em 1em 2.5em;
 }
+
 .modal-header-producto {
     border-bottom: none;
+}
+h3.quick a#prodTitle {
+    color: #000;
+    font-size: 1em;
+    text-decoration: none;
 }
 .modal-close-producto {
     font-size: 31px;
