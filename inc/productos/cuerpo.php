@@ -87,22 +87,18 @@
 			        <div class="add add-3">
 			            <h5>Compartir</h5>
 			        </div>
-			        <div class="add add-3">
-			            
-			            
-			            <div id="shareBtn" class="btn btn-primary clearfix"><i class="fa fa-facebook"></i></div>
-			            
-			            <button onclick="window.open('<?php echo $url_plus_share; ?>','name','width=600,height=400')" data-type="facebook" type="button" class="btn btn-danger btn-facebook social-sharing">
-				        <a href="<?php echo $url_plus_share; ?>" target="popup" ></a> <i class="fa fa-google-plus"></i>
-			            </button>
+                    <div class="clearfix"> </div>
+                    <ul class="social-top">
+					    <li><a href="" id="shareBtn" class="icon facebook"><i class="fa fa-facebook" aria-hidden="true"></i><span></span></a></li>
+					    <!--<li><a href="#" class="icon twitter"><i class="fa fa-twitter" aria-hidden="true"></i><span></span></a></li>-->
+					    <li><a onclick="window.open('<?php echo $url_plus_share; ?>','name','width=600,height=400')" data-type="google-plus" href="<?php echo $url_plus_share; ?>" target="popup" class="icon google"><i class="fa fa-google-plus" aria-hidden="true"></i><span></span></a></li>
+                        <li><a onclick="window.open('<?php echo $url_linkedin_share; ?>','name','width=600,height=400')" data-type="linkedin" href="<?php echo $url_linkedin_share; ?>" target="popup" class="icon linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i><span></span></a></li>
                         <div class="mkt-cnt-whatsapp">
-                        <a class="btn btn-success " target="_blank" href="<?php echo $url_whatsapp_share; ?>" data-action="share/whatsapp/share">
-                        <i class="fa fa-whatsapp"></i></a>
-			            </div>
-			            
-			            <button onclick="window.open('<?php echo $url_linkedin_share; ?>','name','width=600,height=400')" data-type="facebook" type="button" class="btn btn-info btn-facebook social-sharing">
-				        <a href="<?php echo $url_linkedin_share; ?>" target="popup" ></a> <i class="fa fa-linkedin"></i>
-			            </button>
+                            <li><a target="_blank" href="<?php echo $url_whatsapp_share; ?>" data-action="share/whatsapp/share" class="icon whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i><span></span></a></li>
+                        </div>
+					    <!--<li><a href="<?php echo $url_plus_share; ?>" target="popup" class="icon dribbble"><i class="fa fa-google-plus" aria-hidden="true"></i><span></span></a></li>-->
+				    </ul>
+			        <div class="add add-3">
                         <script>
                         document.getElementById('shareBtn').onclick = function() {
                             FB.ui({
