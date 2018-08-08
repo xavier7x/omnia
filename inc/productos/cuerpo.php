@@ -60,10 +60,10 @@
                                 echo "";
                             }
                             ?>
-                            </del><span itemprop="price">$<?php echo $globalProducto['precio']; ?></span></p>
+                            </del><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="<?php echo $globalProducto['precio']; ?>"><?php echo $globalProducto['precio']; ?></span></p>
                     </div>
                     <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating" class="block block-w3">
-                        <div itemprop="ratingValue" class="starbox small ghosting"></div>
+                    <div itemprop="ratingCount" content ='5' class="starbox small ghosting"><span itemprop="ratingValue" hidden>5</span></div>
                     </div>
                     <p itemprop="description" class="in-pa"><?php echo $globalProducto['descripcion_larga']; ?></p>
                     <div class="add add-3">
