@@ -10,6 +10,7 @@
     <meta name="google-site-verification" content="E6EbZNZHTInv3_xwF1qEXghhp9G5YUo0cjkhbfwcZK8" />
     <meta name="msvalidate.01" content="B8933CDE0C76736CF865DAC3EE3CB460" />
     <meta name="keywords" content="<?php echo $varAcceso['meta_keywords']; ?>">
+    <link rel="alternate" href="<?php echo $pdet_valor['hostapp']?>" hreflang="es-ec">
     <!-- Description
     La descripcion que se vera en el motor de busqueda, entre 70 y 160 caracteres
     -->    
