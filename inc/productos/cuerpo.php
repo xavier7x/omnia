@@ -41,7 +41,7 @@
                 <div class="single-right">
                     <h3 itemprop="name"><?php echo $globalProducto['nombre']; ?></h3>
                     <div class="pr-single">
-                        <p itemprop="price" class="reduced"><del>
+                        <p itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="reduced"><del>
                             <?php
                             
                             if((int)$globalProducto['valor'] > 0){
@@ -60,7 +60,7 @@
                                 echo "";
                             }
                             ?>
-                            </del>$<?php echo $globalProducto['precio']; ?></p>
+                            </del><span itemprop="price">$<?php echo $globalProducto['precio']; ?></span></p>
                     </div>
                     <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating" class="block block-w3">
                         <div itemprop="ratingValue" class="starbox small ghosting"></div>
