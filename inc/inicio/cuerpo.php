@@ -27,20 +27,16 @@
 					<ul class="nav tabs ">
                         <?php
                         $catSeleccionada = array();
-                        $resultadoCatPopulares = $conexion->DBConsulta("
-                                select valor from cli_parametros where idparametro = 'catpopulares';
-                            ");
-
+                        $resultadoCatPopulares = $pdet_valor['catpopulares'];
                         if ($resultadoCatPopulares) {
-                            $valorCat = $resultadoCatPopulares->fetch_object();
-                            $catSeleccionada = explode(",", $valorCat->valor);
+                            $catSeleccionada = explode(",", $resultadoCatPopulares);
+                        } else {
+                            echo "Llamar al equipo de Soporte: El error podria estar en los parametros del sitio.";
                         }
                         sort($catSeleccionada);
                         $inicioCategorias = array();
-                        $filtroquery = "";
-                        $filtroquery = $valorCat->valor;
                         $resultadoCatTitulos = $conexion->DBConsulta("
-                                SELECT nombre FROM `subcategorias` WHERE idsubcategoria in ($filtroquery) order by idsubcategoria asc;
+                                SELECT nombre FROM `subcategorias` WHERE idsubcategoria in ($resultadoCatPopulares) order by idsubcategoria asc;
                         ");
                         $contCat = 1;
                         $activeTitle = 'active';
