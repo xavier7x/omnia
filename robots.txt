@@ -1,6 +1,7 @@
 # Robots Servidor Marketton
-# Disallow:   /util/
-# Disallow:   /administracion/util/
+User-agent: *
+Disallow:   /util/
+Disallow:   /administracion/
 
 User-agent: *
 Allow: /
