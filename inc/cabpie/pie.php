@@ -10,13 +10,13 @@
 			<ul>
 				<li><a href="<?php echo $pdet_valor['hostapp']; ?>"><?php echo $menuSys['inicio']['nombre']; ?></a></li>
                 <?php
-                        
-                for($f=0; $f < count($vectorMenu); $f++){
-                    if( count($vectorMenu[$f]['subcategorias']) > 0 ){
-                        echo '<li><a href="'.$pdet_valor['hostapp'].'/'.$vectorMenu[$f]['nombre_seo'].'" >'.ucfirst(strtolower($vectorMenu[$f]['nombre'])).'</a></li>';
+
+                for ($f = 0; $f < count($vectorMenu); $f++) {
+                    if (count($vectorMenu[$f]['subcategorias']) > 0) {
+                        echo '<li><a href="' . $pdet_valor['hostapp'] . '/' . $vectorMenu[$f]['nombre_seo'] . '" >' . ucfirst(strtolower($vectorMenu[$f]['nombre'])) . '</a></li>';
                     }
                 }
-                
+
                 ?>
 			</ul>
 		</div>
@@ -32,13 +32,15 @@
 		<div class="col-md-3 footer-grid">
             <h3>Mi cuenta</h3>
 			<ul>
-				<?php if( $_SESSION['tipocliente'] != 'visitante' ){ ?>        
+				<?php if ($_SESSION['tipocliente'] != 'visitante') { ?>        
                 <li><a href="<?php echo $pdet_valor['hostapp']; ?>/pedidos" ><?php echo $menuSys['pedidos']['nombre']; ?></a></li>
                 <li><a href="<?php echo $pdet_valor['hostapp']; ?>/cuenta" ><?php echo $menuSys['cuenta']['nombre']; ?></a></li>
-                <?php }else{ ?>
+                <?php 
+            } else { ?>
                 <li><a href="<?php echo $pdet_valor['hostapp']; ?>/login" ><?php echo $menuSys['login']['nombre']; ?></a></li>  
                 <li><a href="<?php echo $pdet_valor['hostapp']; ?>/registro" ><?php echo $menuSys['registro']['nombre']; ?></a></li>
-                <?php } ?>
+                <?php 
+            } ?>
                 <li><a href="<?php echo $pdet_valor['hostapp']; ?>/carrito" ><?php echo $menuSys['carrito']['nombre']; ?></a></li>
 			</ul>
 		</div>
@@ -84,54 +86,54 @@
 </a>
 <!-- //smooth scrolling -->
 <?php
-    for($f=0; $f<count($varAcceso['framework']); $f++){
-        switch($varAcceso['framework'][$f]){       
-            case 'jquery':
-                echo '<script type="text/javascript" language="javascript" src="'.$pdet_valor['hostapp'].'/lib/js/jquery/jquery-2.2.4.min.js"></script>';
-                break;
-            case 'jquery-ui':
-                echo '<script type="text/javascript" language="javascript" src="'.$pdet_valor['hostapp'].'/lib/js/jquery-ui/jquery-ui-1.12.0.custom/jquery-ui.min.js"></script>';
-                break;
-            case 'bootstrap':
-                echo '<script type="text/javascript" language="javascript" src="'.$pdet_valor['hostapp'].'/lib/css/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>';
-                break;
-            case 'bootstrap-datepicker':                    
-                echo '<script type="text/javascript" language="javascript" src="'.$pdet_valor['hostapp'].'/lib/js/bootstrap-datepicker-master/dist/js/bootstrap-datepicker.min.js"></script>';
-                echo '<script type="text/javascript" language="javascript" src="'.$pdet_valor['hostapp'].'/lib/js/bootstrap-datepicker-master/dist/locales/bootstrap-datepicker.es.min.js"></script>';
-                break;                    
-            case 'bootboxjs':                    
-                echo '<script type="text/javascript" language="javascript" src="'.$pdet_valor['hostapp'].'/lib/js/bootboxjs/bootbox.min.js"></script>';
-                break;
-            case 'totop':                    
-                echo '<script type="text/javascript" language="javascript" src="'.$pdet_valor['hostapp'].'/lib/js/totop/jquery.ui.totop.min.js"></script>';
-                break;
-            case 'easing':                    
-                echo '<script type="text/javascript" language="javascript" src="'.$pdet_valor['hostapp'].'/lib/js/easing/jquery.easing.1.3.js"></script>';
-                break;
-            case 'mycart':                    
-                echo '<script type="text/javascript" language="javascript" src="'.$pdet_valor['hostapp'].'/lib/js/jquery.mycart-master/jquery.mycart.min.js"></script>';
-                break;
-            case 'vide':                    
-                echo '<script type="text/javascript" language="javascript" src="'.$pdet_valor['hostapp'].'/lib/js/vide/jquery.vide.min.js"></script>';
-                break;
-            case 'jstarbox':                    
-                echo '<script type="text/javascript" language="javascript" src="'.$pdet_valor['hostapp'].'/lib/js/jStarbox-master/jstarbox.js"></script>';
-            case 'easy-responsive-tabs':                    
-                echo '<script type="text/javascript" language="javascript" src="'.$pdet_valor['hostapp'].'/lib/js/easyResponsiveTabs/js/easyResponsiveTabs.js"></script>';
-                break;
-            case 'jqgrid':
-                echo '<script type="text/javascript" language="javascript" src="'.$pdet_valor['hostapp'].'/lib/js/Guriddo_jqGrid_JS_5.1.1/js/i18n/grid.locale-es.js"></script>';
-                echo '<script type="text/javascript" language="javascript" src="'.$pdet_valor['hostapp'].'/lib/js/Guriddo_jqGrid_JS_5.1.1/js/jquery.jqGrid.min.js"></script>';
-                break;
-            case 'jquery-treeview':
-                echo '<script type="text/javascript" language="javascript" src="'.$pdet_valor['hostapp'].'/lib/js/jzaefferer-jquery-treeview/jquery.treeview.js"></script>';
-                break;
-            case 'highcharts':
-                echo '<script type="text/javascript" language="javascript" src="'.$pdet_valor['hostapp'].'/lib/js/Highcharts-4.2.5/js/highcharts.js"></script>';
-                echo '<script type="text/javascript" language="javascript" src="'.$pdet_valor['hostapp'].'/lib/js/Highcharts-4.2.5/js/modules/exporting.js"></script>';
-                break;
-        }
+for ($f = 0; $f < count($varAcceso['framework']); $f++) {
+    switch ($varAcceso['framework'][$f]) {
+        case 'jquery':
+            echo '<script type="text/javascript" language="javascript" src="' . $pdet_valor['hostapp'] . '/lib/js/jquery/jquery-2.2.4.min.js"></script>';
+            break;
+        case 'jquery-ui':
+            echo '<script type="text/javascript" language="javascript" src="' . $pdet_valor['hostapp'] . '/lib/js/jquery-ui/jquery-ui-1.12.0.custom/jquery-ui.min.js"></script>';
+            break;
+        case 'bootstrap':
+            echo '<script type="text/javascript" language="javascript" src="' . $pdet_valor['hostapp'] . '/lib/css/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>';
+            break;
+        case 'bootstrap-datepicker':
+            echo '<script type="text/javascript" language="javascript" src="' . $pdet_valor['hostapp'] . '/lib/js/bootstrap-datepicker-master/dist/js/bootstrap-datepicker.min.js"></script>';
+            echo '<script type="text/javascript" language="javascript" src="' . $pdet_valor['hostapp'] . '/lib/js/bootstrap-datepicker-master/dist/locales/bootstrap-datepicker.es.min.js"></script>';
+            break;
+        case 'bootboxjs':
+            echo '<script type="text/javascript" language="javascript" src="' . $pdet_valor['hostapp'] . '/lib/js/bootboxjs/bootbox.min.js"></script>';
+            break;
+        case 'totop':
+            echo '<script type="text/javascript" language="javascript" src="' . $pdet_valor['hostapp'] . '/lib/js/totop/jquery.ui.totop.min.js"></script>';
+            break;
+        case 'easing':
+            echo '<script type="text/javascript" language="javascript" src="' . $pdet_valor['hostapp'] . '/lib/js/easing/jquery.easing.1.3.js"></script>';
+            break;
+        case 'mycart':
+            echo '<script type="text/javascript" language="javascript" src="' . $pdet_valor['hostapp'] . '/lib/js/jquery.mycart-master/jquery.mycart.min.js"></script>';
+            break;
+        case 'vide':
+            echo '<script type="text/javascript" language="javascript" src="' . $pdet_valor['hostapp'] . '/lib/js/vide/jquery.vide.min.js"></script>';
+            break;
+        case 'jstarbox':
+            echo '<script type="text/javascript" language="javascript" src="' . $pdet_valor['hostapp'] . '/lib/js/jStarbox-master/jstarbox.js"></script>';
+        case 'easy-responsive-tabs':
+            echo '<script type="text/javascript" language="javascript" src="' . $pdet_valor['hostapp'] . '/lib/js/easyResponsiveTabs/js/easyResponsiveTabs.js"></script>';
+            break;
+        case 'jqgrid':
+            echo '<script type="text/javascript" language="javascript" src="' . $pdet_valor['hostapp'] . '/lib/js/Guriddo_jqGrid_JS_5.1.1/js/i18n/grid.locale-es.js"></script>';
+            echo '<script type="text/javascript" language="javascript" src="' . $pdet_valor['hostapp'] . '/lib/js/Guriddo_jqGrid_JS_5.1.1/js/jquery.jqGrid.min.js"></script>';
+            break;
+        case 'jquery-treeview':
+            echo '<script type="text/javascript" language="javascript" src="' . $pdet_valor['hostapp'] . '/lib/js/jzaefferer-jquery-treeview/jquery.treeview.js"></script>';
+            break;
+        case 'highcharts':
+            echo '<script type="text/javascript" language="javascript" src="' . $pdet_valor['hostapp'] . '/lib/js/Highcharts-4.2.5/js/highcharts.js"></script>';
+            echo '<script type="text/javascript" language="javascript" src="' . $pdet_valor['hostapp'] . '/lib/js/Highcharts-4.2.5/js/modules/exporting.js"></script>';
+            break;
     }
+}
 ?>
 
 <script type="text/javascript" language="javascript" src="<?php echo $pdet_valor['hostapp']; ?>/js/cabpie/funciones.js?v=<?php echo $pdet_valor['webversion']; ?>"></script>
@@ -139,11 +141,38 @@
 
 <?php
 $url = $_SERVER['HTTP_HOST'];
-if(
-    strpos($url, 'localhost') === false &&
-    strpos($url, '192.168.100.4') === false
-){
-?>
+if (strpos($url, 'localhost') === false &&
+    strpos($url, '192.168.100.4') === false) {
+    ?>
+<!--tarjetas enriquecidas-->
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "url": "<?php echo $pdet_valor['hostapp']; ?>",
+  "logo": "<?php echo $pdet_valor['hostapp']; ?>/images/system/logo.png",
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "telephone": "<?php echo $pdet_valor['telefonopedidos']; ?>",
+    "contactType": "customer service"
+  }]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "Marketton",
+  "url": "<?php echo $pdet_valor['hostapp']; ?>",
+  "sameAs": [
+    "https://www.facebook.com/markettonec",
+    "https://twitter.com/markettonec",
+    "https://www.linkedin.com/company/markettonec/",
+    "https://www.instagram.com/markettonec/"
+  ]
+}
+</script>
+<!--fin trjetas enriquecidas-->
 <!--<script type="text/javascript" async="async" defer="defer" data-cfasync="false" src="https://mylivechat.com/chatinline.aspx?hccid=40715958"></script>-->
 
 <script>
@@ -155,6 +184,7 @@ if(
   ga('create', 'UA-84967671-1', 'auto');
   ga('send', 'pageview');
 </script>
-<?php } ?>
+<?php 
+} ?>
 </body>
 </html>
