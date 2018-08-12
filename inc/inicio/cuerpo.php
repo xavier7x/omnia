@@ -26,23 +26,40 @@
 				<nav class="nav-sidebar">
 					<ul class="nav tabs ">
                         <?php
-                        
+                        $catSeleccionada = array();
+                        $resultadoCatPopulares = $conexion->DBConsulta("
+                                select valor from cli_parametros where idparametro = 'catpopulares';
+                            ");
+
+                        if ($resultadoCatPopulares) {
+                            $valorCat = $resultadoCatPopulares->fetch_object();
+                            $catSeleccionada = explode(",", $valorCat->valor);
+                        }
+                        sort($catSeleccionada);
                         $inicioCategorias = array();
-                        
+                        $filtroquery = "";
+                        $filtroquery = $valorCat->valor;
+                        $resultadoCatTitulos = $conexion->DBConsulta("
+                                SELECT nombre FROM `subcategorias` WHERE idsubcategoria in ($filtroquery) order by idsubcategoria asc;
+                        ");
+                        $contCat = 1;
+                        $activeTitle = 'active';
+                        foreach ($resultadoCatTitulos as $cateTitulos) {
+                            if ($contCat == 1) {
+                                echo '<li class="' . $activeTitle . '"><a href="#tab' . $contCat . '" data-toggle="tab">' . $cateTitulos['nombre'] . '</a></li>';
+                            } else {
+                                echo '<li class=""><a href="#tab' . $contCat . '" data-toggle="tab">' . $cateTitulos['nombre'] . '</a></li>';
+                            }
+                            $contCat++;
+                        }
                         ?>
-                        <li class="active"><a href="#tab1" data-toggle="tab">Pañales</a></li>
-                        <li class=""><a href="#tab2" data-toggle="tab">Higiene Personal</a></li> 
-                        <li class=""><a href="#tab3" data-toggle="tab">Arroz</a></li>  
-                        <li class=""><a href="#tab4" data-toggle="tab">Cuidado de la ropa</a></li>
 					</ul>
 				</nav>
 				<div class=" tab-content tab-content-t ">
 					<div class="tab-pane active text-style" id="tab1">
 						<div class=" con-w3l">
                             <?php
-                            
                             $claseProducto = new Producto();
-
                             $resultadoSubca = $conexion->DBConsulta("
                                 SELECT a.idproducto, a.nombre, a.nombre_seo, a.precio, a.precio_anterior, a.descripcion_corta, a.descripcion_larga,
                                 b.stock, e.valor
@@ -52,36 +69,36 @@
                                 INNER JOIN sectores AS d ON (c.idzona = d.idzona)
                                 INNER JOIN impuestos AS e ON ( a.idimpuesto = e.idimpuesto )
                                 WHERE a.estado = 'ACTIVO'
-                                AND d.idsector = '".$_SESSION['idsector']."'
+                                AND d.idsector = '" . $_SESSION['idsector'] . "'
                                 AND b.stock > 0
-                                AND a.idsubcategoria = '13'
+                                AND a.idsubcategoria = '" . $catSeleccionada[0] . "'
                                 ORDER BY RAND()
                                 LIMIT 4
                             ", 2);
-                            
+
                             $cuerpoProductos = '';
 
-                            foreach($resultadoSubca as $filaSubca){
+                            foreach ($resultadoSubca as $filaSubca) {
                                 // Validar que exista la imagen o colocar la de error
-                                $imagenProducto = $pdet_valor['hostapp'].'/images/productos/0/320x320/error.png?v='.$pdet_valor['webversion'];
-                                if(file_exists('images/productos/'.$filaSubca['idproducto'].'/320x320/'.$filaSubca['nombre_seo'].'.png')){
-                                    $imagenProducto = $pdet_valor['hostapp'].'/images/productos/'.$filaSubca['idproducto'].'/320x320/'.$filaSubca['nombre_seo'].'.png?v='.$pdet_valor['webversion'];                        
+                                $imagenProducto = $pdet_valor['hostapp'] . '/images/productos/0/320x320/error.png?v=' . $pdet_valor['webversion'];
+                                if (file_exists('images/productos/' . $filaSubca['idproducto'] . '/320x320/' . $filaSubca['nombre_seo'] . '.png')) {
+                                    $imagenProducto = $pdet_valor['hostapp'] . '/images/productos/' . $filaSubca['idproducto'] . '/320x320/' . $filaSubca['nombre_seo'] . '.png?v=' . $pdet_valor['webversion'];
                                 }
 
                                 //******************************
 
                                 $cuerpoProductos .= $claseProducto->graficarProductoModal(
-                                    'm-wthree' ,
-                                    $globalCntModal ,
-                                    $pdet_valor['hostapp'] ,
-                                    $imagenProducto ,
+                                    'm-wthree',
+                                    $globalCntModal,
+                                    $pdet_valor['hostapp'],
+                                    $imagenProducto,
                                     $filaSubca['idproducto'],
-                                    $filaSubca['nombre'] ,
-                                    $filaSubca['nombre_seo'] ,
-                                    $filaSubca['descripcion_larga'] ,
-                                    $filaSubca['descripcion_corta'] ,   
-                                    $filaSubca['precio_anterior'] ,
-                                    $filaSubca['precio'] ,
+                                    $filaSubca['nombre'],
+                                    $filaSubca['nombre_seo'],
+                                    $filaSubca['descripcion_larga'],
+                                    $filaSubca['descripcion_corta'],
+                                    $filaSubca['precio_anterior'],
+                                    $filaSubca['precio'],
                                     $filaSubca['valor']
                                 );
 
@@ -100,7 +117,7 @@
 						<div class=" con-w3l">
 							<?php
 
-                            $resultadoSubca = $conexion->DBConsulta("
+        $resultadoSubca = $conexion->DBConsulta("
                                 SELECT a.idproducto, a.nombre, a.nombre_seo, a.precio, a.precio_anterior, a.descripcion_corta, a.descripcion_larga,
                                 b.stock, e.valor
                                 FROM productos AS a
@@ -109,47 +126,47 @@
                                 INNER JOIN sectores AS d ON (c.idzona = d.idzona)
                                 INNER JOIN impuestos AS e ON ( a.idimpuesto = e.idimpuesto )
                                 WHERE a.estado = 'ACTIVO'
-                                AND d.idsector = '".$_SESSION['idsector']."'
+                                AND d.idsector = '" . $_SESSION['idsector'] . "'
                                 AND b.stock > 0
-                                AND a.idsubcategoria = '12'
+                                AND a.idsubcategoria = '" . $catSeleccionada[1] . "'
                                 ORDER BY RAND()
                                 LIMIT 4
                             ", 2);
-                            
-                            $cuerpoProductos = '';
 
-                            foreach($resultadoSubca as $filaSubca){
+        $cuerpoProductos = '';
+
+        foreach ($resultadoSubca as $filaSubca) {
                                 // Validar que exista la imagen o colocar la de error
-                                $imagenProducto = $pdet_valor['hostapp'].'/images/productos/0/320x320/error.png?v='.$pdet_valor['webversion'];
-                                if(file_exists('images/productos/'.$filaSubca['idproducto'].'/320x320/'.$filaSubca['nombre_seo'].'.png')){
-                                    $imagenProducto = $pdet_valor['hostapp'].'/images/productos/'.$filaSubca['idproducto'].'/320x320/'.$filaSubca['nombre_seo'].'.png?v='.$pdet_valor['webversion'];                        
-                                }
+            $imagenProducto = $pdet_valor['hostapp'] . '/images/productos/0/320x320/error.png?v=' . $pdet_valor['webversion'];
+            if (file_exists('images/productos/' . $filaSubca['idproducto'] . '/320x320/' . $filaSubca['nombre_seo'] . '.png')) {
+                $imagenProducto = $pdet_valor['hostapp'] . '/images/productos/' . $filaSubca['idproducto'] . '/320x320/' . $filaSubca['nombre_seo'] . '.png?v=' . $pdet_valor['webversion'];
+            }
 
                                 //******************************
 
-                                $cuerpoProductos .= $claseProducto->graficarProductoModal(
-                                    'm-wthree' ,
-                                    $globalCntModal ,
-                                    $pdet_valor['hostapp'] ,
-                                    $imagenProducto ,
-                                    $filaSubca['idproducto'],
-                                    $filaSubca['nombre'] ,
-                                    $filaSubca['nombre_seo'] ,
-                                    $filaSubca['descripcion_larga'] ,
-                                    $filaSubca['descripcion_corta'] ,   
-                                    $filaSubca['precio_anterior'] ,
-                                    $filaSubca['precio'] ,
-                                    $filaSubca['valor']
-                                );
+            $cuerpoProductos .= $claseProducto->graficarProductoModal(
+                'm-wthree',
+                $globalCntModal,
+                $pdet_valor['hostapp'],
+                $imagenProducto,
+                $filaSubca['idproducto'],
+                $filaSubca['nombre'],
+                $filaSubca['nombre_seo'],
+                $filaSubca['descripcion_larga'],
+                $filaSubca['descripcion_corta'],
+                $filaSubca['precio_anterior'],
+                $filaSubca['precio'],
+                $filaSubca['valor']
+            );
 
                                 //******************************
 
-                                $globalCntModal++;
-                            }
+            $globalCntModal++;
+        }
 
-                            echo $cuerpoProductos;
+        echo $cuerpoProductos;
 
-                            ?>
+        ?>
 							<div class="clearfix"></div>
 						 </div>		  
 					</div>
@@ -157,7 +174,7 @@
 						<div class=" con-w3l">
 							<?php
 
-                            $resultadoSubca = $conexion->DBConsulta("
+        $resultadoSubca = $conexion->DBConsulta("
                                 SELECT a.idproducto, a.nombre, a.nombre_seo, a.precio, a.precio_anterior, a.descripcion_corta, a.descripcion_larga,
                                 b.stock, e.valor
                                 FROM productos AS a
@@ -166,47 +183,47 @@
                                 INNER JOIN sectores AS d ON (c.idzona = d.idzona)
                                 INNER JOIN impuestos AS e ON ( a.idimpuesto = e.idimpuesto )
                                 WHERE a.estado = 'ACTIVO'
-                                AND d.idsector = '".$_SESSION['idsector']."'
+                                AND d.idsector = '" . $_SESSION['idsector'] . "'
                                 AND b.stock > 0
-                                AND a.idsubcategoria = '8'
+                                AND a.idsubcategoria = '" . $catSeleccionada[2] . "'
                                 ORDER BY RAND()
                                 LIMIT 4
                             ", 2);
-                            
-                            $cuerpoProductos = '';
 
-                            foreach($resultadoSubca as $filaSubca){
+        $cuerpoProductos = '';
+
+        foreach ($resultadoSubca as $filaSubca) {
                                 // Validar que exista la imagen o colocar la de error
-                                $imagenProducto = $pdet_valor['hostapp'].'/images/productos/0/320x320/error.png?v='.$pdet_valor['webversion'];
-                                if(file_exists('images/productos/'.$filaSubca['idproducto'].'/320x320/'.$filaSubca['nombre_seo'].'.png')){
-                                    $imagenProducto = $pdet_valor['hostapp'].'/images/productos/'.$filaSubca['idproducto'].'/320x320/'.$filaSubca['nombre_seo'].'.png?v='.$pdet_valor['webversion'];                        
-                                }
+            $imagenProducto = $pdet_valor['hostapp'] . '/images/productos/0/320x320/error.png?v=' . $pdet_valor['webversion'];
+            if (file_exists('images/productos/' . $filaSubca['idproducto'] . '/320x320/' . $filaSubca['nombre_seo'] . '.png')) {
+                $imagenProducto = $pdet_valor['hostapp'] . '/images/productos/' . $filaSubca['idproducto'] . '/320x320/' . $filaSubca['nombre_seo'] . '.png?v=' . $pdet_valor['webversion'];
+            }
 
                                 //******************************
 
-                                $cuerpoProductos .= $claseProducto->graficarProductoModal(
-                                    'm-wthree' ,
-                                    $globalCntModal ,
-                                    $pdet_valor['hostapp'] ,
-                                    $imagenProducto ,
-                                    $filaSubca['idproducto'],
-                                    $filaSubca['nombre'] ,
-                                    $filaSubca['nombre_seo'] ,
-                                    $filaSubca['descripcion_larga'] ,
-                                    $filaSubca['descripcion_corta'] ,   
-                                    $filaSubca['precio_anterior'] ,
-                                    $filaSubca['precio'] ,
-                                    $filaSubca['valor'] 
-                                );
+            $cuerpoProductos .= $claseProducto->graficarProductoModal(
+                'm-wthree',
+                $globalCntModal,
+                $pdet_valor['hostapp'],
+                $imagenProducto,
+                $filaSubca['idproducto'],
+                $filaSubca['nombre'],
+                $filaSubca['nombre_seo'],
+                $filaSubca['descripcion_larga'],
+                $filaSubca['descripcion_corta'],
+                $filaSubca['precio_anterior'],
+                $filaSubca['precio'],
+                $filaSubca['valor']
+            );
 
                                 //******************************
 
-                                $globalCntModal++;
-                            }
+            $globalCntModal++;
+        }
 
-                            echo $cuerpoProductos;
+        echo $cuerpoProductos;
 
-                            ?>
+        ?>
 							<div class="clearfix"></div>
 						 </div>		  
 					</div>
@@ -214,7 +231,7 @@
 				        <div class=" con-w3l">
 							<?php
 
-                            $resultadoSubca = $conexion->DBConsulta("
+        $resultadoSubca = $conexion->DBConsulta("
                                 SELECT a.idproducto, a.nombre, a.nombre_seo, a.precio, a.precio_anterior, a.descripcion_corta, a.descripcion_larga,
                                 b.stock, e.valor
                                 FROM productos AS a
@@ -223,47 +240,47 @@
                                 INNER JOIN sectores AS d ON (c.idzona = d.idzona)
                                 INNER JOIN impuestos AS e ON ( a.idimpuesto = e.idimpuesto )
                                 WHERE a.estado = 'ACTIVO'
-                                AND d.idsector = '".$_SESSION['idsector']."'
+                                AND d.idsector = '" . $_SESSION['idsector'] . "'
                                 AND b.stock > 0
-                                AND a.idsubcategoria = '3'
+                                AND a.idsubcategoria = '" . $catSeleccionada[3] . "'
                                 ORDER BY RAND()
                                 LIMIT 4
                             ", 2);
-                            
-                            $cuerpoProductos = '';
 
-                            foreach($resultadoSubca as $filaSubca){
+        $cuerpoProductos = '';
+
+        foreach ($resultadoSubca as $filaSubca) {
                                 // Validar que exista la imagen o colocar la de error
-                                $imagenProducto = $pdet_valor['hostapp'].'/images/productos/0/320x320/error.png?v='.$pdet_valor['webversion'];
-                                if(file_exists('images/productos/'.$filaSubca['idproducto'].'/320x320/'.$filaSubca['nombre_seo'].'.png')){
-                                    $imagenProducto = $pdet_valor['hostapp'].'/images/productos/'.$filaSubca['idproducto'].'/320x320/'.$filaSubca['nombre_seo'].'.png?v='.$pdet_valor['webversion'];                        
-                                }
+            $imagenProducto = $pdet_valor['hostapp'] . '/images/productos/0/320x320/error.png?v=' . $pdet_valor['webversion'];
+            if (file_exists('images/productos/' . $filaSubca['idproducto'] . '/320x320/' . $filaSubca['nombre_seo'] . '.png')) {
+                $imagenProducto = $pdet_valor['hostapp'] . '/images/productos/' . $filaSubca['idproducto'] . '/320x320/' . $filaSubca['nombre_seo'] . '.png?v=' . $pdet_valor['webversion'];
+            }
 
                                 //******************************
 
-                                $cuerpoProductos .= $claseProducto->graficarProductoModal(
-                                    'm-wthree' ,
-                                    $globalCntModal ,
-                                    $pdet_valor['hostapp'] ,
-                                    $imagenProducto ,
-                                    $filaSubca['idproducto'],
-                                    $filaSubca['nombre'] ,
-                                    $filaSubca['nombre_seo'] ,
-                                    $filaSubca['descripcion_larga'] ,
-                                    $filaSubca['descripcion_corta'] ,   
-                                    $filaSubca['precio_anterior'] ,
-                                    $filaSubca['precio'] ,
-                                    $filaSubca['valor'] 
-                                );
+            $cuerpoProductos .= $claseProducto->graficarProductoModal(
+                'm-wthree',
+                $globalCntModal,
+                $pdet_valor['hostapp'],
+                $imagenProducto,
+                $filaSubca['idproducto'],
+                $filaSubca['nombre'],
+                $filaSubca['nombre_seo'],
+                $filaSubca['descripcion_larga'],
+                $filaSubca['descripcion_corta'],
+                $filaSubca['precio_anterior'],
+                $filaSubca['precio'],
+                $filaSubca['valor']
+            );
 
                                 //******************************
 
-                                $globalCntModal++;
-                            }
+            $globalCntModal++;
+        }
 
-                            echo $cuerpoProductos;
+        echo $cuerpoProductos;
 
-                            ?>
+        ?>
 							<div class="clearfix"></div>
 						 </div>
 					</div>
@@ -374,7 +391,7 @@
                 WHERE a.estado = 'ACTIVO'
                 AND a.precio_anterior IS NOT NULL
                 AND a.precio < IFNULL(a.precio_anterior, 0)
-                AND d.idsector = '".$_SESSION['idsector']."'
+                AND d.idsector = '" . $_SESSION['idsector'] . "'
                 AND b.stock > 0
                 ORDER BY RAND()
                 LIMIT 8
@@ -382,27 +399,27 @@
 
             $cuerpoProductos = '';
 
-            foreach($resultadoInicio as $filaInicio){
+            foreach ($resultadoInicio as $filaInicio) {
                 // Validar que exista la imagen o colocar la de error
-                $imagenProducto = $pdet_valor['hostapp'].'/images/productos/0/320x320/error.png?v='.$pdet_valor['webversion'];
-                if(file_exists('images/productos/'.$filaInicio['idproducto'].'/320x320/'.$filaInicio['nombre_seo'].'.png')){
-                    $imagenProducto = $pdet_valor['hostapp'].'/images/productos/'.$filaInicio['idproducto'].'/320x320/'.$filaInicio['nombre_seo'].'.png?v='.$pdet_valor['webversion'];                        
+                $imagenProducto = $pdet_valor['hostapp'] . '/images/productos/0/320x320/error.png?v=' . $pdet_valor['webversion'];
+                if (file_exists('images/productos/' . $filaInicio['idproducto'] . '/320x320/' . $filaInicio['nombre_seo'] . '.png')) {
+                    $imagenProducto = $pdet_valor['hostapp'] . '/images/productos/' . $filaInicio['idproducto'] . '/320x320/' . $filaInicio['nombre_seo'] . '.png?v=' . $pdet_valor['webversion'];
                 }
 
                 //******************************
 
                 $cuerpoProductos .= $claseProducto->graficarProductoModal(
-                    'pro-1' ,
-                    $globalCntModal ,
-                    $pdet_valor['hostapp'] ,
-                    $imagenProducto ,
+                    'pro-1',
+                    $globalCntModal,
+                    $pdet_valor['hostapp'],
+                    $imagenProducto,
                     $filaInicio['idproducto'],
-                    $filaInicio['nombre'] ,
-                    $filaInicio['nombre_seo'] ,
-                    $filaInicio['descripcion_larga'] ,
-                    $filaInicio['descripcion_corta'] ,   
-                    $filaInicio['precio_anterior'] ,
-                    $filaInicio['precio'] ,
+                    $filaInicio['nombre'],
+                    $filaInicio['nombre_seo'],
+                    $filaInicio['descripcion_larga'],
+                    $filaInicio['descripcion_corta'],
+                    $filaInicio['precio_anterior'],
+                    $filaInicio['precio'],
                     $filaInicio['valor']
                 );
 
