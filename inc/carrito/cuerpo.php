@@ -22,9 +22,9 @@
         </div>
         -->
         <ul class="nav nav-tabs nav-justified">
-            <li class="active"><a data-toggle="tab" href="#home">Carrito</a></li>
-            <li><a data-toggle="tab" href="#menu1">Datos envío</a></li>
-            <li><a data-toggle="tab" href="#menu2">Datos facturación</a></li>
+            <li id="carritoStep" class="active"><a data-toggle="tab" href="#home">Carrito</a></li>
+            <li id="datosEnvioStep"><a id="datosEnvioStepClick" data-toggle="tab" href="#menu1">Datos envío</a></li>
+            <li id="datosFacturacionStep"><a id="datosFacturacionStepClick" data-toggle="tab" href="#menu2">Datos facturación</a></li>
         </ul>
         <div id="contiene_jqGrid" class="tab-content">
             <div id="home" class="row tab-pane fade in active">
@@ -110,9 +110,9 @@
                         <div class="form-group">
                             <label class="control-label"></label>
                             <?php
-                            if($_SESSION['tipocliente'] == 'visitante'){
-                                echo '<a href="'.$pdet_valor['hostapp'].'/login/carrito" class="btn btn-warning btn-lg btn-block">Ingresar</a>';
-                            }else{
+                            if ($_SESSION['tipocliente'] == 'visitante') {
+                                echo '<a href="' . $pdet_valor['hostapp'] . '/login/carrito" class="btn btn-warning btn-lg btn-block">Ingresar</a>';
+                            } else {
                                 echo '<button type="submit" id="submitFormCarrito" class="btn btn-warning btn-lg btn-block" >Generar pedido</button>';
                             }
                             ?>
@@ -142,7 +142,7 @@
                     </div>
                 </div>        
                 <div class="col-sm-12">
-                    <?php if($_SESSION['tipocliente'] == 'visitante'){ ?>
+                    <?php if ($_SESSION['tipocliente'] == 'visitante') { ?>
                         <div class="alert alert-warning alert-dismissable text-center">
                             Debe iniciar sesión para registrar sus datos de envío
                         </div>
@@ -153,7 +153,8 @@
                             <a href="<?php echo $pdet_valor['hostapp']; ?>/login/carrito" class="btn btn-warning btn-lg btn-block">Ingresar</a>
                         </div>
                         
-                    <?php }else{ ?>
+                    <?php 
+                } else { ?>
                         <form role="form" id="formEnvio">
                             <input type="hidden" id="idenvio" value="0">
                             <div class="row">
@@ -233,7 +234,8 @@
                                 </div>
                             </div>
                         </form>
-                    <?php } ?>
+                    <?php 
+                } ?>
                 </div>
                 <div class="col-sm-12">
                     <div class="table-responsive">
@@ -252,7 +254,7 @@
                     </div>
                 </div>
                 <div class="col-sm-12">
-                    <?php if($_SESSION['tipocliente'] == 'visitante'){ ?>
+                    <?php if ($_SESSION['tipocliente'] == 'visitante') { ?>
                         <div class="alert alert-warning alert-dismissable text-center">
                             Debe iniciar sesión para registrar sus datos de facturación
                         </div>
@@ -262,7 +264,8 @@
                         <div class="col-sm-6 form-group">
                             <a href="<?php echo $pdet_valor['hostapp']; ?>/login/carrito" class="btn btn-warning btn-lg btn-block">Ingresar</a>
                         </div>
-                    <?php }else{ ?>
+                    <?php 
+                } else { ?>
                         <form role="form" id="formFacturacion">
                             <input type="hidden" id="idfacturacion" value="0">
                             <div class="row">
@@ -322,7 +325,8 @@
                                 </div>
                             </div>
                         </form>
-                    <?php } ?>
+                    <?php 
+                } ?>
                 </div>
                 <div class="col-sm-12">
                     <div class="table-responsive">

@@ -10,7 +10,7 @@
     <meta name="google-site-verification" content="E6EbZNZHTInv3_xwF1qEXghhp9G5YUo0cjkhbfwcZK8" />
     <meta name="msvalidate.01" content="B8933CDE0C76736CF865DAC3EE3CB460" />
     <meta name="keywords" content="<?php echo $varAcceso['meta_keywords']; ?>">
-    <link rel="alternate" href="<?php echo $pdet_valor['hostapp']?>" hreflang="es-ec">
+    <link rel="alternate" href="<?php echo $pdet_valor['hostapp'] ?>" hreflang="es-ec">
     <!-- Description
     La descripcion que se vera en el motor de busqueda, entre 70 y 160 caracteres
     -->    
@@ -21,8 +21,8 @@
     
     <!--meta etiquetas para que facebook reconozca las imagenes y titulos-->
     <?php
-    if(count($globalProducto) > 0 && file_exists('images/productos/'.$globalProducto['idproducto'].'/320x320/'.$globalProducto['nombre_seo'].'.png')){
-        $imgProShared = $pdet_valor['hostapp'].'/images/productos/'.$globalProducto['idproducto'].'/320x320/'.$globalProducto['nombre_seo'].'.png?v='.$pdet_valor['webversion'];                        
+    if (file_exists('images/productos/' . $globalProducto['idproducto'] . '/320x320/' . $globalProducto['nombre_seo'] . '.png')) {
+        $imgProShared = $pdet_valor['hostapp'] . '/images/productos/' . $globalProducto['idproducto'] . '/320x320/' . $globalProducto['nombre_seo'] . '.png?v=' . $pdet_valor['webversion'];
     }
     ?>
     
@@ -62,7 +62,7 @@
     <meta property="fb:app_id" content="868889376642502" />
     <meta property="og:title" content="<?php echo $varAcceso['meta_description']; ?>" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="<?php echo $pdet_valor['hostapp'].$_SERVER["REQUEST_URI"]; ?>"/>
+    <meta property="og:url" content="<?php echo $pdet_valor['hostapp'] . $_SERVER["REQUEST_URI"]; ?>"/>
     <meta property="og:image" content="<?php echo $imgProShared ?>" />
     <meta property="og:description" content="<?php echo $varAcceso['meta_description']; ?>" />
     <!-- fin metaetiquetas de facebook-->
@@ -77,34 +77,37 @@
     <link href="<?php echo $pdet_valor['hostapp']; ?>/images/system/favicon.ico?v=<?php echo $pdet_valor['webversion']; ?>" rel="icon" type="image/x-icon"/>
     
     <?php
-        for($f=0; $f<count($varAcceso['framework']); $f++){
-            switch($varAcceso['framework'][$f]){ 
-                case 'jquery-ui':
-                    echo '<link href="'.$pdet_valor['hostapp'].'/lib/js/jquery-ui/jquery-ui-1.12.0.custom/jquery-ui.min.css" rel="stylesheet" type="text/css"/>';
-                    echo '<link href="'.$pdet_valor['hostapp'].'/lib/js/jquery-ui/jquery-ui-1.12.0.custom/jquery-ui.structure.min.css" rel="stylesheet" type="text/css"/>';
-                    echo '<link href="'.$pdet_valor['hostapp'].'/lib/js/jquery-ui/jquery-ui-1.12.0.custom/jquery-ui.theme.min.css" rel="stylesheet" type="text/css"/>';
-                    break;
-                case 'bootstrap':
-                    echo '<link href="'.$pdet_valor['hostapp'].'/lib/css/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>';
-                    echo '<link href="'.$pdet_valor['hostapp'].'/lib/css/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>';
-                    break;
-                case 'bootstrap-datepicker':
-                    echo '<link href="'.$pdet_valor['hostapp'].'/lib/js/bootstrap-datepicker-master/dist/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css"/>';
-                    break;
-                case 'jqgrid':
-                    echo '<link href="'.$pdet_valor['hostapp'].'/lib/js/Guriddo_jqGrid_JS_5.1.1/css/ui.jqgrid-bootstrap.css" rel="stylesheet" type="text/css"/>';
-                    break;
-                case 'jquery-treeview':
-                    echo '<link href="'.$pdet_valor['hostapp'].'/lib/js/jzaefferer-jquery-treeview/jquery.treeview.css" rel="stylesheet" type="text/css"/>';
-                    break;
-                case 'font-awesome':
-                    echo '<link href="'.$pdet_valor['hostapp'].'/lib/css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>';
-                    break;
-                case 'jstarbox':
-                    echo '<link href="'.$pdet_valor['hostapp'].'/lib/js/jStarbox-master/css/jstarbox.css" rel="stylesheet" type="text/css"/>';
-                    break;
-            }
+    for ($f = 0; $f < count($varAcceso['framework']); $f++) {
+        switch ($varAcceso['framework'][$f]) {
+            case 'jquery-ui':
+                echo '<link href="' . $pdet_valor['hostapp'] . '/lib/js/jquery-ui/jquery-ui-1.12.0.custom/jquery-ui.min.css" rel="stylesheet" type="text/css"/>';
+                echo '<link href="' . $pdet_valor['hostapp'] . '/lib/js/jquery-ui/jquery-ui-1.12.0.custom/jquery-ui.structure.min.css" rel="stylesheet" type="text/css"/>';
+                echo '<link href="' . $pdet_valor['hostapp'] . '/lib/js/jquery-ui/jquery-ui-1.12.0.custom/jquery-ui.theme.min.css" rel="stylesheet" type="text/css"/>';
+                break;
+            case 'bootstrap':
+                echo '<link href="' . $pdet_valor['hostapp'] . '/lib/css/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>';
+                echo '<link href="' . $pdet_valor['hostapp'] . '/lib/css/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>';
+                break;
+            case 'bootstrap-datepicker':
+                echo '<link href="' . $pdet_valor['hostapp'] . '/lib/js/bootstrap-datepicker-master/dist/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css"/>';
+                break;
+            case 'jqgrid':
+                echo '<link href="' . $pdet_valor['hostapp'] . '/lib/js/Guriddo_jqGrid_JS_5.1.1/css/ui.jqgrid-bootstrap.css" rel="stylesheet" type="text/css"/>';
+                break;
+            case 'jquery-treeview':
+                echo '<link href="' . $pdet_valor['hostapp'] . '/lib/js/jzaefferer-jquery-treeview/jquery.treeview.css" rel="stylesheet" type="text/css"/>';
+                break;
+            case 'font-awesome':
+                echo '<link href="' . $pdet_valor['hostapp'] . '/lib/css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>';
+                break;
+            case 'introjs':
+                echo '<link href="' . $pdet_valor['hostapp'] . '/lib/js/intro.js-2.9.0/introjs.css" rel="stylesheet" type="text/css"/>';
+                break;
+            case 'jstarbox':
+                echo '<link href="' . $pdet_valor['hostapp'] . '/lib/js/jStarbox-master/css/jstarbox.css" rel="stylesheet" type="text/css"/>';
+                break;
         }
+    }
     ?>
     
     
@@ -223,14 +226,16 @@
             </div>
             <div class="head-t">
                 <ul class="card">                
-                    <?php if( $_SESSION['tipocliente'] != 'visitante' ){ ?>                    
+                    <?php if ($_SESSION['tipocliente'] != 'visitante') { ?>                    
                     <li><a href="<?php echo $pdet_valor['hostapp']; ?>/pedidos" ><i class="fa fa-file-text-o" aria-hidden="true"></i><?php echo $menuSys['pedidos']['nombre']; ?></a></li>
                     <li><a href="<?php echo $pdet_valor['hostapp']; ?>/cuenta" ><i class="fa fa-user-circle-o" aria-hidden="true"></i><?php echo $menuSys['cuenta']['nombre']; ?></a></li>
                     <li><a href="<?php echo $pdet_valor['hostapp']; ?>/util/system/logoutSession.php" ><i class="fa fa-sign-out" aria-hidden="true"></i>Cerrar sesión</a></li>
-                    <?php }else{ ?>
+                    <?php 
+                } else { ?>
                     <li><a href="<?php echo $pdet_valor['hostapp']; ?>/registro" ><i class="fa fa-user" aria-hidden="true"></i><?php echo $menuSys['registro']['nombre']; ?></a></li>   
                     <li><a href="<?php echo $pdet_valor['hostapp']; ?>/login" ><i class="fa fa-sign-in" aria-hidden="true"></i><?php echo $menuSys['login']['nombre']; ?></a></li>             
-                    <?php } ?>
+                    <?php 
+                } ?>
                     <li><a href="<?php echo $pdet_valor['hostapp']; ?>/carrito" ><i class="fa fa-shopping-cart" aria-hidden="true"></i><?php echo $menuSys['carrito']['nombre']; ?></a></li>  
                 </ul>	
             </div>
@@ -254,74 +259,68 @@
                 </div> 
                 <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                     <ul class="nav navbar-nav">
-                        <li class="<?php echo ( $varAcceso['ventana'] == 'inicio' ? "active" : "" ); ?>"><a href="<?php echo $pdet_valor['hostapp']; ?>" class="hyper"><span><?php echo $menuSys['inicio']['nombre']; ?></span></a></li>
+                        <li class="<?php echo ($varAcceso['ventana'] == 'inicio' ? "active" : ""); ?>"><a href="<?php echo $pdet_valor['hostapp']; ?>" class="hyper"><span><?php echo $menuSys['inicio']['nombre']; ?></span></a></li>
                         <?php
-                        
-                        for($f=0; $f < count($vectorMenu); $f++){
-                            $menuCatAct = ''; 
-                            $menuCatInt = '';                            
+
+                        for ($f = 0; $f < count($vectorMenu); $f++) {
+                            $menuCatAct = '';
+                            $menuCatInt = '';
                             $subDiv = (int)ceil(count($vectorMenu[$f]['subcategorias']) / 3);                            
                             
                             // Validar si el menu seleccionado
-                            if( 
-                                count($globalCategoria) > 0 && 
-                                $vectorMenu[$f]['nombre_seo'] == $globalCategoria['nombre_seo'] 
-                            ){
-                                $menuCatAct = 'active'; 
+                            if (count($globalCategoria) > 0 &&
+                                $vectorMenu[$f]['nombre_seo'] == $globalCategoria['nombre_seo']) {
+                                $menuCatAct = 'active';
                             }
-                            
+
                             $cntCatInt = 1;
                             $flaSubAbierta = false;
                             $columnasAbi = 0;
-                            
-                            for($i=0; $i < count($vectorMenu[$f]['subcategorias']); $i++){
+
+                            for ($i = 0; $i < count($vectorMenu[$f]['subcategorias']); $i++) {
                                 
                                 // Si esta cerrada abrirla
-                                if($flaSubAbierta == false){
+                                if ($flaSubAbierta == false) {
                                     $menuCatInt .= '<div class="col-sm-3">';
                                     $menuCatInt .= '<ul class="multi-column-dropdown">';
-                                    
+
                                     $columnasAbi++;
                                     $flaSubAbierta = true;
                                 }
                                 
                                 // Escribir el item
-                                $menuCatInt .= '<li><a href="'.$pdet_valor['hostapp'].'/'.$vectorMenu[$f]['nombre_seo'].'/'.$vectorMenu[$f]['subcategorias'][$i]['nombre_seo'].'">';
+                                $menuCatInt .= '<li><a href="' . $pdet_valor['hostapp'] . '/' . $vectorMenu[$f]['nombre_seo'] . '/' . $vectorMenu[$f]['subcategorias'][$i]['nombre_seo'] . '">';
                                 $menuCatInt .= '<i class="fa fa-angle-right" aria-hidden="true">';
-                                $menuCatInt .= '</i>'.$vectorMenu[$f]['subcategorias'][$i]['nombre'].'</a></li>';
+                                $menuCatInt .= '</i>' . $vectorMenu[$f]['subcategorias'][$i]['nombre'] . '</a></li>';
                                 
                                 // si esta abierta y solo contine un item o ya tiene el tamaño cerrarlo
-                                if(
-                                    $flaSubAbierta == true && (                                    
-                                        ( $i + 1 ) == count($vectorMenu[$f]['subcategorias']) || 
-                                        $cntCatInt == $subDiv
-                                    )
-                                ){
+                                if ($flaSubAbierta == true && (($i + 1) == count($vectorMenu[$f]['subcategorias']) ||
+                                    $cntCatInt == $subDiv)) {
                                     $menuCatInt .= '</ul>';
                                     $menuCatInt .= '</div>';
-                                    
+
                                     $cntCatInt = 1;
                                     $flaSubAbierta = false;
-                                }else{
+                                } else {
                                     $cntCatInt++;
                                 }
                                 
                                 // Añadir las columnas que faltaron de 3
-                                if( ( $i + 1 ) == count($vectorMenu[$f]['subcategorias']) ){
-                                    for( $c=$columnasAbi ; $c < 3; $c++ ){
+                                if (($i + 1) == count($vectorMenu[$f]['subcategorias'])) {
+                                    for ($c = $columnasAbi; $c < 3; $c++) {
                                         $menuCatInt .= '<div class="col-sm-3"></div>';
                                     }
                                 }
-                                
+
                             }
-                            
-                            if( !empty($menuCatInt) ){
+
+                            if (!empty($menuCatInt)) {
                                 $menuCatInt .= '<div class="col-sm-3 w3l">';
-                                $menuCatInt .= '<a href="'.$pdet_valor['hostapp'].'/'.$vectorMenu[$f]['nombre_seo'].'"><img src="'.$pdet_valor['hostapp'].'/images/categorias/'.$vectorMenu[$f]['nombre_seo'].'.png?v='.$pdet_valor['webversion'].'" class="img-responsive" alt="'.$vectorMenu[$f]['nombre'].'"></a>';
+                                $menuCatInt .= '<a href="' . $pdet_valor['hostapp'] . '/' . $vectorMenu[$f]['nombre_seo'] . '"><img src="' . $pdet_valor['hostapp'] . '/images/categorias/' . $vectorMenu[$f]['nombre_seo'] . '.png?v=' . $pdet_valor['webversion'] . '" class="img-responsive" alt="' . $vectorMenu[$f]['nombre'] . '"></a>';
                                 $menuCatInt .= '</div>';
                             }
-                            
-                            $menuCat = '<li class="dropdown '.$menuCatAct.'">';
+
+                            $menuCat = '<li class="dropdown ' . $menuCatAct . '">';
                             $menuCat .= '<a href="#" class="dropdown-toggle  hyper" data-toggle="dropdown"><span>';
                             $menuCat .= ucfirst(strtolower($vectorMenu[$f]['nombre']));
                             $menuCat .= '<b class="caret"></b></span></a>';
@@ -334,14 +333,14 @@
                             $menuCat .= '</li>';
                             
                             // Imprimir la categoria solo si tiene subcategorias                            
-                            if( !empty($menuCatInt) ){
+                            if (!empty($menuCatInt)) {
                                 echo $menuCat;
                             }
-                                                        
-                        } 
-                        
+
+                        }
+
                         ?>
-                        <li class="<?php echo ( $varAcceso['ventana'] == 'contacto' ? "active" : "" ); ?>"><a href="<?php echo $pdet_valor['hostapp']; ?>/contacto" class="hyper"><span><?php echo $menuSys['contacto']['nombre']; ?></span></a></li>
+                        <li class="<?php echo ($varAcceso['ventana'] == 'contacto' ? "active" : ""); ?>"><a href="<?php echo $pdet_valor['hostapp']; ?>/contacto" class="hyper"><span><?php echo $menuSys['contacto']['nombre']; ?></span></a></li>
                     </ul>
                 </div>
                 </nav>
@@ -352,10 +351,10 @@
                             $resultadoCabTotal = $conexion->DBConsulta("
                                 SELECT IFNULL(SUM(cantidad),0) AS total
                                 FROM cli_carrito_detalle 
-                                WHERE usuario = '".$_SESSION['usuario']."'
+                                WHERE usuario = '" . $_SESSION['usuario'] . "'
                             ");
 
-                            foreach($resultadoCabTotal as $filaCabTotal){
+                            foreach ($resultadoCabTotal as $filaCabTotal) {
                                 echo $filaCabTotal['total'];
                             }
                             ?>
