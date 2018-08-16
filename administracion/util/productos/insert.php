@@ -65,8 +65,8 @@ if(
     
 ){
     $usuario = $_POST['usuario'];
-    $nombre = $_POST['nombre'];
-    $nombre_seo = strtolower($_POST['nombre_seo']);
+    $nombre = addslashes($_POST['nombre']);
+    $nombre_seo = addslashes(strtolower($_POST['nombre_seo']));
     $sku = $_POST['sku'];
     $costo = $_POST['costo'];
     $precio = $_POST['precio'];
@@ -76,13 +76,13 @@ if(
     $idproveedor = $_POST['idproveedor'];
     $idsubcategoria = $_POST['idsubcategoria'];
     $idmarca = $_POST['idmarca'];
-    $descripcion_corta = $_POST['descripcion_corta'];
+    $descripcion_corta = addslashes($_POST['descripcion_corta']);
 }
 
 if(
     (isset($_POST['descripcion_larga']) && !empty($_POST['descripcion_larga'])) 
 ){
-    $descripcion_larga = $_POST['descripcion_larga'];
+    $descripcion_larga = addslashes($_POST['descripcion_larga']);
 }
 
 if(
