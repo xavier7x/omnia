@@ -264,7 +264,7 @@ function calculoImp(){
 
 function getCleanedString(cadena){
    // Definimos los caracteres que queremos eliminar
-   var specialChars = "¡!@#$^%*()+=\\[]\"'{}|´:<>¿?,.";
+   var specialChars = "¡!@#$^%*()+=\\[]\"'{}|´:<>¿?,.'";
 
    // Los eliminamos todos
    for (var i = 0; i < specialChars.length; i++) {
