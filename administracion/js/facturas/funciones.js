@@ -744,7 +744,7 @@ $(document).ready(function() {
     
     $("#jqGridFacturas").on("click",'.gestion_select',function(event){
         var idfactura =  this.dataset.idfactura;
-        $('.nav-tabs a[href="#menu1"]').tab('show');
+        $('.nav-tabs a[href="#menu1Now"]').tab('show');
         
         $('#idfactura option[value="'+idfactura+'"]').prop('selected', true);        
         mostrarFacturaDetalles();

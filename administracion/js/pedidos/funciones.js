@@ -717,7 +717,7 @@ $(document).ready(function() {
     
     $("#jqGridPedidos").on("click",'.gestion_select',function(event){
         var idpedido =  this.dataset.idpedido;
-        $('.nav-tabs a[href="#menu1"]').tab('show');
+        $('.nav-tabs a[href="#menu1Now"]').tab('show');
         
         $('#idpedido option[value="'+idpedido+'"]').prop('selected', true);        
         mostrarPedidoDetalles();

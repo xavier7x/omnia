@@ -374,7 +374,7 @@ $(document).ready(function() {
         }
         
         // Select tab by name
-        $('.nav-tabs a[href="#menu1"]').tab('show');
+        $('.nav-tabs a[href="#menu1Now"]').tab('show');
         calculoImp();
         
     });

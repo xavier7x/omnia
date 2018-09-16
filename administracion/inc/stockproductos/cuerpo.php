@@ -1,6 +1,6 @@
 <ul class="nav nav-tabs nav-justified">
     <li class="active"><a data-toggle="tab" href="#home">Visualización</a></li>
-    <li><a data-toggle="tab" href="#menu1">Ingresos</a></li>
+    <li><a data-toggle="tab" href="#menu1Now">Ingresos</a></li>
     <li><a data-toggle="tab" href="#menu2">Egresos</a></li>
     <li><a data-toggle="tab" href="#menu3">Mínimos y máximos</a></li>
 </ul>
@@ -26,7 +26,7 @@
             </div>
         </div>  
     </div>
-    <div id="menu1" class="row tab-pane fade">
+    <div id="menu1Now" class="row tab-pane fade">
         <br>
         <div class="col-sm-12">            
             <div class="well well-sm">

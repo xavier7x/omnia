@@ -435,7 +435,7 @@ $(document).ready(function() {
             $('#imagen_producto_ing').attr('src',"../images/productos/0/320x320/error.png?v="+d.getTime());
         }
         
-        $('.nav-tabs a[href="#menu1"]').tab('show');
+        $('.nav-tabs a[href="#menu1Now"]').tab('show');
         
         limpiarFormBodegaEgreso();
         
