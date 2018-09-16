@@ -11,12 +11,20 @@
     <meta name='owner' content='Lcdo. Michael Jonathan Rodríguez Coello'>
     <meta name="robots" content="index, follow">
     
-    <link href="images/system/favicon.ico?v=<?php echo $pdet_valor['webversion']; ?>" rel="icon" type="image/x-icon"/>
+    <!--<link href="images/system/favicon.ico?v=<?php echo $pdet_valor['webversion']; ?>" rel="icon" type="image/x-icon"/>
     <link href="lib/css/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="lib/css/bootstrap-3.3.6-dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
-    <link href="css/login/style.css?v=<?php echo $pdet_valor['webversion']; ?>" rel="stylesheet" type="text/css"/>
+    <link href="css/login/style.css?v=<?php echo $pdet_valor['webversion']; ?>" rel="stylesheet" type="text/css"/>-->
+    
+    <link href="images/system/favicon.ico?v=<?php echo $pdet_valor['webversion']; ?>" rel="icon" type="image/x-icon"/>
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="vendors/animate.css/animate.min.css" rel="stylesheet">
+    <link href="lib/css/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="lib/css/bootstrap-3.3.6-dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+    <link href="build/css/custom.min.css?v=<?php echo $pdet_valor['webversion']; ?>" rel="stylesheet">
 </head>
-<body>
+<body class="login">
 <!-- Parametros de la aplicacion -->    
 <input type="hidden" id="param_empresa" value="<?php echo $pdet_valor['empresa']; ?>">
     
@@ -50,7 +58,37 @@
     </div>
 </div>
     
-    <div class="container">
+<div class="login_wrapper">
+    <div class="animate form login_form">
+        <section class="login_content">
+        <form role="form" id="formLogin">
+            <!--<h1>Acceso al sistema</h1>-->
+            <h1>Bienvenido al sistema administrador de <b><?php echo $pdet_valor['empresa']; ?></b></h1>
+            <div>
+                <input autocomplete="off" type="text" id="usuario" class="form-control" placeholder="Ingrese su nombre de usuario" required/>
+            </div>
+            <div>
+                <input autocomplete="off" type="password" id="contrasena" class="form-control" placeholder="Ingrese su contraseña" required/>
+            </div>
+            <div>
+                <button type="submit" id="submitFormLogin" class="btn btn-default submit">Acceder</button>
+            </div>
+            <div class="clearfix">
+            </div>
+            <div class="separator">
+            <div class="clearfix">
+            </div>
+            <br/>
+            <div>
+                <h1><i class="fa fa-paw"></i> <?php echo $pdet_valor['empresa']; ?></h1>
+                <p>©<?php echo date("Y"); ?> All Rights Reserved. <?php echo $pdet_valor['empresa']; ?>.</p>
+            </div>
+            </div>
+        </form>
+        </section>
+    </div>
+</div>
+    <!--<div class="container">
         
         <div class="row">
             <div class="col-sm-12">
@@ -100,7 +138,7 @@
 			<hr/>
 			<img src="images/system/logo.png?v=<?php echo $pdet_valor['webversion']; ?>" alt="<?php echo $pdet_valor['empresa']; ?>" width="200" />
 	    </footer>
-    </div>
+    </div>-->
 
 <script type="text/javascript" language="javascript" src="lib/js/jquery/jquery-2.2.4.min.js"></script>
 <script type="text/javascript" language="javascript" src="lib/css/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>

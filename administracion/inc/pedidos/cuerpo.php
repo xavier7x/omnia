@@ -1,6 +1,6 @@
 <ul class="nav nav-tabs nav-justified">
     <li class="active"><a data-toggle="tab" href="#home">Pedidos</a></li>
-    <li><a data-toggle="tab" href="#menu1">Detalles pedido</a></li>
+    <li><a data-toggle="tab" href="#menu1Now">Detalles pedido</a></li>
 </ul>
 <div id="contiene_jqGrid" class="tab-content">
     <div id="home" class="row tab-pane fade in active">        
@@ -35,7 +35,7 @@
             </div>
         </div>  
     </div>
-    <div id="menu1" class="row tab-pane fade">
+    <div id="menu1Now" class="row tab-pane fade">
         <br>
         <form role="form" id="formPedidoDetalle">  
             <div class="col-sm-6">
