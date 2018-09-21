@@ -129,7 +129,7 @@ for ($f = 0; $f < count($varAcceso['framework']); $f++) {
             echo '<script type="text/javascript" language="javascript" src="' . $pdet_valor['hostapp'] . '/lib/js/jzaefferer-jquery-treeview/jquery.treeview.js"></script>';
             break;
         case 'introjs':
-            echo '<script type="text/javascript" language="javascript" src="' . $pdet_valor['hostapp'] . '/lib/js/intro.js-2.9.0/intro.js"></script>';
+            echo '<script type="text/javascript" language="javascript" src="' . $pdet_valor['hostapp'] . '/lib/js/intro.js-2.9.3/intro.js"></script>';
             break;
         case 'highcharts':
             echo '<script type="text/javascript" language="javascript" src="' . $pdet_valor['hostapp'] . '/lib/js/Highcharts-4.2.5/js/highcharts.js"></script>';
