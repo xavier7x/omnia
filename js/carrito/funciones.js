@@ -1,4 +1,4 @@
-function tutorialCompra() {
+/*function tutorialCompra() {
     introJs().setOptions({
         steps: [{
                 intro: "Hoy vamos a ver como realizar tu primera compra!"
@@ -57,6 +57,93 @@ function tutorialCompra() {
     }).oncomplete(function() {
         console.log(this, arguments, 'oncomplete');
     }).start();
+}*/
+
+
+function tutorialCompra() {
+	//if($('a.introjs-donebutton:visible').length==0) {
+		    var intro = introJs();
+			intro.setOptions({
+				showStepNumbers: false,
+				tooltipClass: 'introjs-tooltip-fb',
+				exitOnOverlayClick: false,
+				showProgress: true,
+				steps: [
+                    {
+                        intro: "Hoy vamos a ver como realizar tu primera compra!"
+                    },
+                    {
+                        element: '.table-cart',
+                        intro: "Este es tu listado de productos."
+                    },
+                    {
+                        element: '#idenvio_select',
+                        intro: "La primera vez que realizas tu compra tendras que ingresar una o dos direcciones para la entrega del producto",
+                        position: 'right'
+                    },
+                    {
+                        element: '#add_envio',
+                        intro: 'Haz click aqui para ingresar tu dirección.',
+                        position: 'bottom'
+                    },
+                    {
+                        element: '#datosEnvioStep',
+                        intro: "Aqui ingresa todos los datos que te solicita la pantalla. No te rindas estamos cerca.",
+                        position: 'left'
+                    },
+                    {
+                        element: '#datosFacturacionStep',
+                        intro: 'Aqui llena tus datos de facturacion.',
+                        position: 'right'
+                    },
+                    {
+                        element: '#submitFormFacturacion',
+                        intro: 'No olvides guardar todos tus Datos.',
+                        position: 'right'
+                    },
+                    {
+                        element: '#idsector_envio',
+                        intro: 'Si no deseas cancelar el valor del envio elige la opcion sitio acordado un asesor se contactara contigo para elegir el lugar.',
+                        position: 'right'
+                    }
+						]
+			});
+			intro.onafterchange(function(targetElement) {
+                if (this._currentStep === 4) {
+                    $('#add_envio').trigger('click');
+                    return false;
+                }
+                if (this._currentStep === 5) {
+                    $('#datosFacturacionStepClick').trigger('click');
+                    return false;
+                }
+                if (this._currentStep === 7) {
+                    $('#datosEnvioStepClick').trigger('click');
+                    return false;
+                }
+				/*if(this._currentStep == 1){
+					//$('.introjs-tooltip-fb').css('top', '-80px').delay( 800 );
+					overlay = document.getElementsByClassName("introjs-tooltip-fb");
+					for(i=0; i<overlay.length; i++) {
+						setTimeout(function(){overlay[0].style.top = '-80px';}, 350);
+						//overlay[i].style.right = '10px';
+					}
+				}*/
+			});
+			intro.onbeforechange(function(targetElement) {
+				/*if(this._currentStep == 1){
+					var li_social = $("#li-Social").css("display");
+					if(li_social == "none"){
+						intro.goToStep(0);
+					}
+				}*/				
+			});
+			intro.start();
+		//actionButtonCampIntroJs_Done();
+		/*$("#social_fb").click(function(event){
+			intro.exit();
+		});*/
+    //}
 }
 
 function mostrarCarrito() {
