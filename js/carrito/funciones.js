@@ -65,7 +65,7 @@ function tutorialCompra() {
 		    var intro = introJs();
 			intro.setOptions({
 				showStepNumbers: false,
-				tooltipClass: 'introjs-tooltip-fb',
+				//tooltipClass: 'introjs-tooltip-fb',
 				exitOnOverlayClick: false,
 				showProgress: true,
 				steps: [
