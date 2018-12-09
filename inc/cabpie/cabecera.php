@@ -21,8 +21,10 @@
     
     <!--meta etiquetas para que facebook reconozca las imagenes y titulos-->
     <?php
-    if (file_exists('images/productos/' . $globalProducto['idproducto'] . '/320x320/' . $globalProducto['nombre_seo'] . '.png')) {
-        $imgProShared = $pdet_valor['hostapp'] . '/images/productos/' . $globalProducto['idproducto'] . '/320x320/' . $globalProducto['nombre_seo'] . '.png?v=' . $pdet_valor['webversion'];
+    if(isset($globalProducto['idproducto']) && isset($globalProducto['nombre_seo'])){
+        if (file_exists('images/productos/'.$globalProducto['idproducto'].'/320x320/'.$globalProducto['nombre_seo'].'.png')) {
+            $imgProShared = $pdet_valor['hostapp'].'/images/productos/'.$globalProducto['idproducto'].'/320x320/'.$globalProducto['nombre_seo'].'.png?v='.$pdet_valor['webversion'];
+        }
     }
     ?>
     
