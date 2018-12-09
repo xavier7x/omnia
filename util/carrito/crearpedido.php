@@ -367,22 +367,22 @@ if(
                                             user_create, sys_create) 
                                             VALUES 
                                             ('".$idbodega."','".$usuario."','CREADO',
-                                            'CREADO',".(empty($comentario) ? "NULL" : "'".$comentario."'").",
+                                            'CREADO',".(empty($comentario) ? "NULL" : "'".addslashes($comentario)."'").",
                                             '0','0',
                                             '0','0',
                                             '0','0','".$costo_envio."','0',
                                             '".$datosAtencion['idatencion']."','".$datosAtencion['inicio']."','".$datosAtencion['fin']."',
                                             '".$datosMetodoPago['idmetodopago']."','".$datosMetodoPago['nombre']."',
                                             '".$datosEnvio['idenvio']."','".$datosEnvio['titulo']."',
-                                            '".$datosEnvio['nombre']."','".$datosEnvio['direccion']."',
+                                            '".$datosEnvio['nombre']."','".addslashes($datosEnvio['direccion'])."',
                                             '".$datosEnvio['movil1']."',".(empty($datosEnvio['movil2']) ? "NULL" : "'".$datosEnvio['movil2']."'").",
                                             '".$datosEnvio['idprovincia']."','".$datosEnvio['provincia_nom']."',
                                             '".$datosEnvio['idcanton']."','".$datosEnvio['canton_nom']."',
                                             '".$datosEnvio['idzona']."','".$datosEnvio['zona_nom']."',
                                             '".$datosEnvio['idsector']."','".$datosEnvio['sector_nom']."',
                                             '".$datosFacturacion['idfacturacion']."','".$datosFacturacion['titulo']."',
-                                            '".$datosFacturacion['nombre']."','".$datosFacturacion['direccion']."',
-                                            '".$datosFacturacion['num_doc']."','".$datosFacturacion['mail']."',
+                                            '".$datosFacturacion['nombre']."','".addslashes($datosFacturacion['direccion'])."',
+                                            '".$datosFacturacion['num_doc']."','".addslashes($datosFacturacion['mail'])."',
                                             '".$datosFacturacion['movil1']."',".(empty($datosFacturacion['movil2']) ? "NULL" : "'".$datosFacturacion['movil2']."'").",
                                             '".$usuario."',NOW())
                                         ");
@@ -419,7 +419,7 @@ if(
                                                         subtotal, total, 
                                                         user_create, sys_create) 
                                                         VALUES
-                                                        ('".$idpedido."','".$productos[$f]['idproducto']."','".$productos[$f]['nombre']."',
+                                                        ('".$idpedido."','".$productos[$f]['idproducto']."','".addslashes($productos[$f]['nombre'])."',
                                                         '".$productos[$f]['costo']."','".$productos[$f]['precio']."',
                                                         '".$productos[$f]['margen']."','".$productos[$f]['cantidad']."',
                                                         '".$productos[$f]['costo_total']."','".$productos[$f]['margen_total']."',
@@ -479,7 +479,7 @@ if(
                                                     (idpedido, proceso, comentario, 
                                                     user_create, sys_create) 
                                                     VALUES 
-                                                    ('".$idpedido."','CREADO',".(empty($comentario) ? "NULL" : "'".$comentario."'").",
+                                                    ('".$idpedido."','CREADO',".(empty($comentario) ? "NULL" : "'".addslashes($comentario)."'").",
                                                     '".$usuario."',NOW())
                                                 ");
 
@@ -490,7 +490,7 @@ if(
                                                     (idpedido, proceso, comentario, 
                                                     user_create, sys_create) 
                                                     VALUES 
-                                                    ('".$idpedido."','CREADO',".(empty($comentario) ? "NULL" : "'".$comentario."'").",
+                                                    ('".$idpedido."','CREADO',".(empty($comentario) ? "NULL" : "'".addslashes($comentario)."'").",
                                                     '".$usuario."',NOW())
                                                 ");
 
@@ -573,7 +573,7 @@ if(
                                                             INSERT INTO sys_envio_correo
                                                             (idtipoalertabod, usuario, email, titulo, cuerpo, user_create, sys_create) 
                                                             VALUES 
-                                                            ('1','".$usuarios_alerta_1[$f]['usuario']."','".$usuarios_alerta_1[$f]['mail']."','Stock productos','".$body_1."','".$usuario."',NOW())
+                                                            ('1','".$usuarios_alerta_1[$f]['usuario']."','".$usuarios_alerta_1[$f]['mail']."','Stock productos','".addslashes($body_1)."','".$usuario."',NOW())
                                                         ");
 
                                                     }
@@ -611,7 +611,7 @@ if(
                                                         INSERT INTO sys_envio_correo
                                                         (idtipoalertabod, usuario, email, titulo, cuerpo, user_create, sys_create) 
                                                         VALUES 
-                                                        ('2','".$usuarios_alerta_2[$f]['usuario']."','".$usuarios_alerta_2[$f]['mail']."','Creación de pedido','".$body_2."','".$usuario."',NOW())
+                                                        ('2','".$usuarios_alerta_2[$f]['usuario']."','".$usuarios_alerta_2[$f]['mail']."','Creación de pedido','".addslashes($body_2)."','".$usuario."',NOW())
                                                     ");
 
                                                 }
@@ -664,7 +664,7 @@ if(
                                                             INSERT INTO sys_envio_correo
                                                             (idtipoalertabod, usuario, email, titulo, cuerpo, user_create, sys_create) 
                                                             VALUES 
-                                                            ('3','".$usuarios_alerta_3[$f]['usuario']."','".$usuarios_alerta_3[$f]['mail']."','Maximo de pedidos','".$body_3."','".$usuario."',NOW())
+                                                            ('3','".$usuarios_alerta_3[$f]['usuario']."','".$usuarios_alerta_3[$f]['mail']."','Maximo de pedidos','".addslashes($body_3)."','".$usuario."',NOW())
                                                         ");
 
                                                     }
@@ -681,7 +681,7 @@ if(
                                                     INSERT INTO cli_envio_correo
                                                     (idtipoalerta, usuario, email, titulo, cuerpo, user_create, sys_create) 
                                                     VALUES 
-                                                    ('3','".$usuario."','".$mail."','Creación de pedido','".$body."','".$usuario."',NOW())
+                                                    ('3','".$usuario."','".$mail."','Creación de pedido','".addslashes($body)."','".$usuario."',NOW())
                                                 ");
 
 
