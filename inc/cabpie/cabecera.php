@@ -27,40 +27,7 @@
         }
     }
     ?>
-    
-    <!--smarttlook para grabar a los visitantes-->
-    <script type="text/javascript">
-    window.smartlook||(function(d) {
-    var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
-    var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
-    c.charset='utf-8';c.src='https://rec.smartlook.com/recorder.js';h.appendChild(c);
-    })(document);
-    smartlook('init', '023df0bcbef0b7bb46df8d9182905219792a9d8d');
-    </script>
-    <!--fin smartlook-->
-    <!-- integracion facebook sdk javascript-->
-    <script>
-          window.fbAsyncInit = function() {
-            FB.init({
-              appId            : '868889376642502',
-              autoLogAppEvents : true,
-              xfbml            : true,
-              version          : 'v3.0'
-            });
-          };
-        
-          (function(d, s, id){
-             var js, fjs = d.getElementsByTagName(s)[0];
-             if (d.getElementById(id)) {return;}
-             js = d.createElement(s); js.id = id;
-             js.src = "https://connect.facebook.net/en_ES/sdk.js";
-             fjs.parentNode.insertBefore(js, fjs);
-           }(document, 'script', 'facebook-jssdk'));
-    </script>
-    <!--sdk de facebook-->
-    
-    
-    <!-- fin integracion facebook sdk-->
+    <!-- inicio metaetiquetas de facebook-->
     <meta property="fb:app_id" content="868889376642502" />
     <meta property="og:title" content="<?php echo $varAcceso['meta_description']; ?>" />
     <meta property="og:type" content="website" />
@@ -135,16 +102,6 @@
     }(document, 'script', 'facebook-jssdk'));
     </script>
 
-    <!-- Your customer chat code -->
-    <div class="fb-customerchat"
-    attribution=setup_tool
-    page_id="859854860811105"
-    theme_color="#0084ff"
-    logged_in_greeting="¡Hola! como podemos ayudarte?"
-    logged_out_greeting="¡Hola! como podemos ayudarte?"
-    greeting_dialog_display=fade>
-    </div>
-    <!--end messenger-->
     <!-- Parametros de sesion de la aplicacion -->
     <input type="hidden" id="session_usuario" value="<?php echo $_SESSION['usuario']; ?>">
     <input type="hidden" id="session_tipocliente" value="<?php echo $_SESSION['tipocliente']; ?>">
