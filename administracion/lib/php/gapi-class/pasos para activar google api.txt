@@ -1,0 +1,9 @@
+nota: debe tener un perfil de google analytics con datos una vista correctamente configurada
+
+1.- seguir los pasos del video https://www.youtube.com/watch?v=tKpscsvdmWI
+
+2.- descargar gapi class https://github.com/erebusnz/gapi-google-analytics-php-interface
+
+al momento de realizar la lectura de los datos hay que descargar el cerficado p12
+
+y como ultimo paso hay que agregar el correo al listado de correos administradores en el perfil de google analytics sino la api no devuelve datos
