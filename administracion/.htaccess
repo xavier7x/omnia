@@ -5,9 +5,13 @@ RewriteEngine On
 # ErrorDocument 404 http://www.marketton.com/administracion/page404.php
 ErrorDocument 404 http://localhost/marketton/administracion/page404.php
 
+# Redireccionar de HTTPS a HTTP
+# RewriteCond %{HTTPS} ^on$
+# RewriteRule ^(.*)$ http://www.marketton.com/administracion/$1 [NC,L,R]
+
 # Redirigir la url sin www
-# RewriteCond %{HTTP_HOST} ^marketton.com/administracion/ [NC]
-# RewriteRule (.*) http://www.marketton.com/administracion/$1 [R=301,L,QSA]
+# RewriteCond %{HTTP_HOST} ^marketton.com [NC]
+# RewriteRule ^(.*)$ http://www.marketton.com/administracion/$1 [L,R=301]
 
 RewriteCond %{REQUEST_FILENAME} !-d
 # RewriteRule (.*)/$ http://www.marketton.com/administracion/$1 [R=301,L,QSA]
