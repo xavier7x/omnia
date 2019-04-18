@@ -293,26 +293,26 @@
 		
 		<div class="col-md-4 m-w3ls">
 			<div class="col-md1 ">
-				<a href="<?php echo $pdet_valor['hostapp']; ?>/alimentos-y-bebidas/enlatados-y-envasados">
-					<img src="<?php echo $pdet_valor['hostapp']; ?>/images/banner/enlatados.png?v=<?php echo $pdet_valor['webversion']; ?>" class="img-responsive img" alt="Enlatados">
-					<div class="big-sa">
+				<a href="<?php echo $pdet_valor['hostapp']; ?>/vida-y-salud/sistema-digestivo">
+					<img src="<?php echo $pdet_valor['hostapp']; ?>/images/banner/sistema-digestivo.png?v=<?php echo $pdet_valor['webversion']; ?>" class="img-responsive img" alt="Enlatados">
+					<!--<div class="big-sa">
 						<h6>Nuevas categorias</h6>
-						<h3>Enlat<span>ados</span></h3>
-						<p>Endulza tu día con un capricho</p>
-					</div>
+						<h3>Sistema<span>Digestivo</span></h3>
+						<p>Tu vida mas sana</p>
+					</div>-->
 				</a>
 			</div>
 		</div>
 		<div class="col-md-4 m-w3ls1">
 			<div class="col-md ">
-				<a href="<?php echo $pdet_valor['hostapp']; ?>/alimentos-y-bebidas/galletas">
-					<img src="<?php echo $pdet_valor['hostapp']; ?>/images/banner/snacks.png?v=<?php echo $pdet_valor['webversion']; ?>" class="img-responsive img" alt="Snacks">
-					<div class="big-sale">
+				<a href="<?php echo $pdet_valor['hostapp']; ?>/vida-y-salud/control-de-peso">
+					<img src="<?php echo $pdet_valor['hostapp']; ?>/images/banner/control-de-peso.png?v=<?php echo $pdet_valor['webversion']; ?>" class="img-responsive img" alt="Snacks">
+					<!--<div class="big-sale">
 						<div class="big-sale1">
 							<h3><span>Snacks</span></h3>
                             <p>Todo para tu fiesta</p>
 						</div>
-					</div>
+					</div>-->
 				</a>
 			</div>
 		</div>
@@ -349,10 +349,10 @@
   </ol>
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-     <a href="<?php echo $pdet_valor['hostapp']; ?>/cuidado-personal"><img class="first-slide" src="<?php echo $pdet_valor['hostapp']; ?>/images/banner/cuidado-personal.png?v=<?php echo $pdet_valor['webversion']; ?>" alt="Cuidado personal"></a>
+     <a href="<?php echo $pdet_valor['hostapp']; ?>/vida-y-salud/nutricion-general"><img class="first-slide" src="<?php echo $pdet_valor['hostapp']; ?>/images/banner/nutricion-general.png?v=<?php echo $pdet_valor['webversion']; ?>" alt="Cuidado personal"></a>
     </div>
     <div class="item">
-     <a href="<?php echo $pdet_valor['hostapp']; ?>/limpieza-y-hogar"><img class="second-slide " src="<?php echo $pdet_valor['hostapp']; ?>/images/banner/limpieza-y-hogar.png?v=<?php echo $pdet_valor['webversion']; ?>" alt="Limpieza y hogar"></a>
+     <a href="<?php echo $pdet_valor['hostapp']; ?>/vida-y-salud/sistema-inmunologico"><img class="second-slide " src="<?php echo $pdet_valor['hostapp']; ?>/images/banner/sistema-inmunologico.png?v=<?php echo $pdet_valor['webversion']; ?>" alt="Limpieza y hogar"></a>
     </div>
   </div>
   <div class="clearfix"></div>

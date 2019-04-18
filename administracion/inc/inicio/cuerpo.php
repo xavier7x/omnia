@@ -1,10 +1,60 @@
+<?php
+require 'lib/php/gapi-class/gapi.class.php';
+
+//define('ga_profile_id','130670972');
+
+$ga = new gapi("marketton-serv@marketton-analytics.iam.gserviceaccount.com", "lib/php/gapi-class/Marketton Analytics-35e00313b395.p12"); //ok
+
+$profileId = '130670972';
+
+$dimensions = array('pagePath');
+$metrics = array('pageviews');
+$sortMetric=null;
+$filter=null;
+$hoy = strtotime("today");
+/*semana actual*/
+$start_week = strtotime("last sunday midnight",$hoy);
+$end_week = strtotime("next saturday",$hoy);
+$startDate = date("Y-m-d",strtotime ( '+1 day' ,$start_week)); 
+$endDate = date("Y-m-d",strtotime ( '-1 day' ,$end_week));
+
+$startIndex=1;
+$maxResults=10000;
+$ga->requestReportData($profileId, $dimensions, $metrics, $sortMetric, $filter, $startDate, $endDate, $startIndex, $maxResults);
+$totalPageviews = $ga->getPageviews();
+
+/*semana anterior*/
+$hoy_ant_week = strtotime("-1 week -1 day");
+$start_ant_week = strtotime("last sunday midnight",$hoy_ant_week);
+$end_ant_week = strtotime("next saturday",$hoy_ant_week);
+$start_ant = date("Y-m-d",strtotime ( '+1 day' ,$start_ant_week)); 
+$end_ant = date("Y-m-d",strtotime ( '-1 day' ,$end_ant_week));
+$ga_ant = new gapi("marketton-serv@marketton-analytics.iam.gserviceaccount.com", "lib/php/gapi-class/Marketton Analytics-35e00313b395.p12"); //ok
+$ga_ant->requestReportData($profileId, $dimensions, $metrics, $sortMetric, $filter, $start_ant, $end_ant, $startIndex, $maxResults);
+$totalPageviews_ant = $ga_ant->getPageviews();
+$porc_vs_week = 0;
+/*sacar porcentaje de alza o baja semana vs semana anterior*/
+//formula ((Valor Reciente / Valor Anterior) – 1) x 100 nota el valor reciente siempre debe ser el numerador
+$porc_vs_week = (($totalPageviews / $totalPageviews_ant)-1)*100;
+$class = "red";
+$fafa =  "desc";
+$cadena_buscada   = '-';
+$decide_tipo = strpos($porc_vs_week, $cadena_buscada);
+if ($posicion_coincidencia === true) {
+  $class = "green";
+  $fafa =  "asc";
+}
+$porc_vs_week = round($porc_vs_week,0);
+
+?>
+
 <!-- page content -->
 
           <div class="row tile_count">
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Users</span>
-              <div class="count">2500</div>
-              <span class="count_bottom"><i class="green">4% </i> From last Week</span>
+              <span class="count_top"><i class="fa fa-user"></i> Paginas Vistas</span>
+              <div class="count" title="Total Semana Anterior <?php echo $totalPageviews_ant;?>"><?php echo $totalPageviews; ?></div>
+              <span class="count_bottom"><i class="<?php echo $class; ?>"><i class="fa fa-sort-<?php echo $fafa;?>"></i><?php echo $porc_vs_week."%"; ?> </i> From last Week</span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-clock-o"></i> Average Time</span>
